@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import NavBarmobile from './NavBar';
+import NavBarmobile from './NavBarmobile';
 
 export default function Example() {
       const links = [
@@ -19,8 +19,8 @@ export default function Example() {
 
     return (
       <div className="relative isolate overflow-hidden bg-gray-900 pb-24 sm:pb-32">
-        <NavBarmobile />
         <NavBar />
+        <NavBarmobile />
         <img
           src="/images/peluqueria-bo-4.jpg"
           alt=""

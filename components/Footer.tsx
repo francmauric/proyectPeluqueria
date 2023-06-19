@@ -6,7 +6,7 @@ export default function Footer () {
                 <h2 className="p-3 cursor-pointer">Linkedin</h2>
                 <h2 className="p-3 cursor-pointer" >Instagram</h2>
                 <h2 className="p-3 cursor-pointer">Facebook</h2>
-                <h2 className="p-3 cursor-pointer  hover:shadow-indigo-500">Twitter</h2>
+                <h2 className="p-3 cursor-pointer ">Twitter</h2>
             </div>
         </>
     )

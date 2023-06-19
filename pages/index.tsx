@@ -11,14 +11,12 @@ export default function Home() {
         <Header />
 
       
-      <main>
+      
         <Main />
-      </main>
+      
 
       
-      <section>
-
-      </section>
+     
 
       
         <Footer />

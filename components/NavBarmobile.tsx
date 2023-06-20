@@ -7,7 +7,7 @@ export default function NavBar () {
     return(
         <>
          <Disclosure as='nav'>
-            <Disclosure.Button className="bg-black absolute top-4 right-4 inline-flex items-center peer justify-center rounded-md ps-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group">
+            <Disclosure.Button className="bg-gray-400 absolute top-4 right-4 flex items-center peer justify-center rounded-md ps-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group w-9 h-9">
             {/* <Disclosure.Button className="absolute top-4 right-4 inline-flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group"> */}
                 <GiHamburgerMenu 
                     className="block sm:hidden h-6 w-6"

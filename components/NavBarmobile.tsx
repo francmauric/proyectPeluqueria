@@ -7,15 +7,15 @@ export default function NavBar () {
     return(
         <>
          <Disclosure as='nav'>
-            <Disclosure.Button className="bg-gray-400  absolute top-4 right-4 flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group w-9 h-9">
+            <Disclosure.Button className="bg-gray-400 sm:hidden absolute top-4 right-4 flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group w-9 h-9">
             {/* <Disclosure.Button className="absolute top-4 right-4 inline-flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group"> */}
                 <GiHamburgerMenu 
-                    className="block sm:hidden h-6 w-6 text-center"
+                    className="block  h-6 w-6 text-center"
                     aria-hidden="true"
                 />
             </Disclosure.Button>
-            <div className="p-6 w-1/2 h-screen bg-gray-500 z-20 bg-opacity-80 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
-              <div className="flex flex-col  justify-start item-center ">
+            <div className="p-6 w-1/2 h-screen bg-gray-500 z-20 bg-opacity-80 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200 sm:hidden">
+              <div className="flex flex-col rounded justify-start item-center ">
                 <div className="flex items-center  bg-gray-500 bg-opacity-80 p-5 h-48 pb-10">
                     <img className="rounded-full h-32 w-32" src="images/hair-salon.jpg" alt="hair" />
                 </div>

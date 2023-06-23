@@ -50,7 +50,7 @@ export default function Example() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight py-10 text-white sm:text-6xl">Peluqueria How 'U want</h2>
             

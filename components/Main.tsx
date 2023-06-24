@@ -6,8 +6,8 @@ export default function Main () {
         <div className="bg-gray-200 flex items-center justify-center flex-col ">
             <h1 className="flex justify-center h-96 w-full">La mejor peluqueria de Santa Croce Camerina</h1>
             <div className="bg-gray-400 flex justify-center mb-12 flex-col items-center w-4/5 m-black">
-                <figure className="relative isolate flex flex-1 h-96 bg-black p-6 opacity-100 overflow-hidden transition-flex duration-500 hover:opacity-100 hover:flex-5">
-                <img className="w-60 h-96 " src="images/rulos.jpg" alt="rulos" />
+                <figure className="relative isolate flex flex-1 h-96 bg-black p-6 opacity-100 overflow-hidden transition duration-500 hover:opacity-100 hover:flex-5 opacity-75 hover:opacity-100">
+                <img className="w-60 h-96  top-0 right-0 -z-1 object-cover " src="images/rulos.jpg" alt="rulos" />
                 </figure>
             </div>
         </div>

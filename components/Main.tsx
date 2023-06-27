@@ -4,8 +4,8 @@ import React from "react"
 export default function Main () {
     return(
       <div>
-        <div className="bg-gray-200 flex items-center justify-center flex-col ">
-            <div className="flex justify-center h-96 w-full">La mejor peluqueria de Santa Croce Camerina</div>
+        <div className="bg-orange-800 flex items-center justify-center flex-col ">
+            <div className="flex justify-center w-full">La mejor peluqueria de Santa Croce Camerina</div>
             
             {/* <div className="max-w-screen-md px-full py-4 mx-auto">
                <div className="bg-gray-400 flex justify-center mb-12  w-2/5 m-black">
@@ -24,12 +24,21 @@ export default function Main () {
                 <div className="gallery-wrapper">
                     <figure className="gallery-item">
                         <img className="item-image" src="/images/rulos.jpg" alt="rulos" />
+                        <figcaption className="item-description">
+                            <h2 className="name">Tus mejores Rulos</h2>
+                        </figcaption>
                     </figure>
                     <figure className="gallery-item">
                         <img className="item-image" src="/images/rubia.jpg" alt="rubia" />
+                        <figcaption className="item-description">
+                            <h2 className="name">Tu mejor brillo</h2>
+                        </figcaption>
                     </figure>
                     <figure className="gallery-item">
                         <img className="item-image" src="/images/lazio.jpg" alt="lazio" />
+                        <figcaption className="item-description">
+                            <h2 className="name">TU cabello Lazio</h2>
+                        </figcaption>
                     </figure>
                 </div>
             </div>    

@@ -40,3 +40,38 @@
     height: 100%;
     object-fit: cover;
 }
+
+.item-description {
+    align-self: flex-end;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.name {
+    font-size: 37px;
+    background: linear-gradient(90deg,#f32d5b,#ff009b);
+    padding-inline: 10px;
+    transform: translateY(-10px);
+    visibility: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item:hover .name {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.gallery-item:not(:hover) .name{
+    transition-delay: 0s;
+}
+
+@media screen and (max-width:768px) {
+    .gallery-item{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .gallery-item:hover{
+        flex-basis: 100%;
+    }
+}

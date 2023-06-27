@@ -18,12 +18,17 @@ export default function Example() {
 
 
     return (
-      <div className="relative isolate overflow-hidden bg-gray-900 pb-24 sm:pb-32">
+      <div>
+      <div  className="relative isolate overflow-hidden bg-gray-900 pb-24 sm:pb-32">
         <NavBarmobile />
         <NavBar />
         <img
           src="/images/peluqueria-bo-4.jpg"
           alt=""
+          style={{
+            clipPath:
+              'polygon(0% 0%, 100% 0%, 100% 90%, 0 100%)',
+          }}
           className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
         />
         <div
@@ -67,6 +72,13 @@ export default function Example() {
             </dl>
           </div>
         </div>
+      </div>
+          <div className='section-dividerHeader0'>          
+            <div className='section-dividerHeader'>
+                <h1>section separate</h1>
+                <img src="" alt="" />
+            </div>
+          </div>
       </div>
     )
   }

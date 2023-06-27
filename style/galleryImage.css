@@ -75,3 +75,17 @@
         flex-basis: 100%;
     }
 }
+
+.section-dividerHeader{
+    background-color: orangered;
+    width: auto;
+    height: 90px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0 100%);
+}
+
+.section-dividerHeader0{
+    background-color: rgb(93, 72, 65);
+    width: auto;
+    height: 110px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
+}

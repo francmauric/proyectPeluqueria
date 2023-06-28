@@ -5,7 +5,7 @@ export default function Main () {
     return(
       <div>
         <div className="bg-orange-800 flex items-center justify-center flex-col ">
-            <div className="flex justify-center w-full">La mejor peluqueria de Santa Croce Camerina</div>
+            <div className="flex justify-center w-full ">La mejor peluqueria de Santa Croce Camerina</div>
             
             {/* <div className="max-w-screen-md px-full py-4 mx-auto">
                <div className="bg-gray-400 flex justify-center mb-12  w-2/5 m-black">

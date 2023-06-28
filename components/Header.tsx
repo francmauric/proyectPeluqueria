@@ -73,12 +73,28 @@ export default function Example() {
           </div>
         </div>
       </div>
+         <div className='section-dividerHeader00'>       
           <div className='section-dividerHeader0'>          
             <div className='section-dividerHeader'>
-                <h1>section separate</h1>
-                <img src="" alt="" />
+                
+                <div className='w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white'>    
+                  <img className='w-16 h-16  ' src="/images/barber-1.png" alt="barber" />
+                </div>
+                <div className='w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white '>    
+                  <img className='w-16 h-16  ' src="/images/barber-2.png" alt="barber" />
+                </div>
+                <div className='w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white '>    
+                  <img className='w-16 h-16  ' src="/images/barber-3.png" alt="barber" />
+                </div>
+                <div className='w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white '>    
+                  <img className='w-16 h-16  ' src="/images/barber-4.png" alt="barber" />
+                </div>
+                <div className='w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white'>    
+                  <img className='w-16 h-16  ' src="/images/barber-5.png" alt="barber" />
+                </div>
             </div>
           </div>
+         </div>
       </div>
     )
   }

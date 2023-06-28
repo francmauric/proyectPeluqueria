@@ -81,11 +81,24 @@
     width: auto;
     height: 90px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .section-dividerHeader0{
     background-color: rgb(93, 72, 65);
     width: auto;
-    height: 110px;
+    height: auto;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
+    
+}
+
+.section-dividerHeader00{
+    background-color: rgb(156, 133, 126);
+    width: auto;
+    height: auto;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 100%);
+    
+
 }

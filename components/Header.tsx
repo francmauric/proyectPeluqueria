@@ -19,7 +19,7 @@ export default function Example() {
 
     return (
       <div>
-      <div  className="relative isolate overflow-hidden bg-gray-900 pb-24 sm:pb-32">
+      <div  className="relative isolate overflow-hidden bg-[#5D4037] pb-24 sm:pb-32">
         <NavBarmobile />
         <NavBar />
         <img

@@ -1,11 +1,10 @@
 import React from 'react';
 import NavBar from './NavBar';
 import NavBarmobile from './NavBarmobile';
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 
 export default function Example() {
       const salon = [
-          {name: "salon-1", href:"/images/local-1.jpg"}
+          "../images/salon-1.jpg"
       ]
 
       const links = [

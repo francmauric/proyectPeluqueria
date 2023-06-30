@@ -1,7 +1,13 @@
 import React from "react"
-
+import Carrousel from './Carrousel'
 
 export default function Main () {
+
+    const slides = [
+        "../images/salon-1.jpg"
+    ]
+
+
     return(
       <div>
         <div className="bg-[#5D4037] flex items-center justify-center  ">
@@ -53,7 +59,13 @@ export default function Main () {
                 Nuestros clientes nos escogen desde hace mucho tiempo y nos valoran como una de las peluquerías referentes de Barcelona. Profesionalismo, formación, compromiso y pasión por nuestro trabajo es lo que nos define. ¡Dinos lo que deseas y te será concedido!
             </div>
         </div>
-        
+
+        <Carrousel autoslide= {true}>
+                {[
+                    ...slides.map((s) => <img src={s} />), ""
+                ]}
+        </Carrousel>        
+
       </div>
     )
 }

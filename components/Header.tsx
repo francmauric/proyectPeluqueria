@@ -1,8 +1,13 @@
 import React from 'react';
 import NavBar from './NavBar';
 import NavBarmobile from './NavBarmobile';
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 
 export default function Example() {
+      const salon = [
+          {name: "salon-1", href:"/images/local-1.jpg"}
+      ]
+
       const links = [
           { name: 'Open roles', href: '#' },
           { name: 'Internship program', href: '#' },
@@ -23,7 +28,7 @@ export default function Example() {
         <NavBarmobile />
         <NavBar />
         <img
-          src="/images/peluqueria-bo-4.jpg"
+          src="/images/salon-7.jpg"
           alt=""
           style={{
             clipPath:
@@ -95,6 +100,7 @@ export default function Example() {
             </div>
           </div>
          </div>
+         
       </div>
     )
   }

@@ -4,10 +4,12 @@ import React from "react"
 export default function Main () {
     return(
       <div>
-        <div className="bg-[#5D4037] flex items-center justify-center flex-col ">
-            <div className="flex justify-center w-full text-4xl p-10 text-[#FFFFFF] ">La mejor peluqueria de Santa Croce Camerina</div>
+        <div className="bg-[#5D4037] flex items-center justify-center  ">
+            <div className="">
+                <div className="flex justify-center w-full text-4xl p-10 text-[#FFFFFF] ">La mejor peluqueria de Santa Croce Camerina</div>
                 <p className="text-white text-lg p-10">"¡Bienvenidos a HOW YOU WANT! Somos un equipo apasionado de estilistas y 
                     especialistas en cuidado capilar dedicados a realzar tu belleza y brindarte una experiencia única. Nuestro objetivo es no solo transformar tu apariencia, sino también elevar tu confianza y bienestar personal.</p>
+            </div>
             {/* <div className="max-w-screen-md px-full py-4 mx-auto">
                <div className="bg-gray-400 flex justify-center mb-12  w-2/5 m-black">
                 <figure className="relative isolate flex flex-1 h-96 bg-black   overflow-hidden transition duration-500 hover:flex-5  opacity-75 hover:opacity-100">

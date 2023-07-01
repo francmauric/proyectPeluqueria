@@ -3,10 +3,7 @@ import NavBar from './NavBar';
 import NavBarmobile from './NavBarmobile';
 
 export default function Example() {
-      const salon = [
-          "../images/salon-1.jpg"
-      ]
-
+      
       const links = [
           { name: 'Open roles', href: '#' },
           { name: 'Internship program', href: '#' },

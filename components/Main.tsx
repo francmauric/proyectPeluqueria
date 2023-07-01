@@ -4,13 +4,18 @@ import Carrousel from './Carrousel'
 export default function Main () {
 
     const slides = [
-        "../images/salon-1.jpg"
+        "../images/salon-1.jpg",
+        "../images/salon-2.jpg",
+        "../images/salon-3.jpg",
+        "../images/salon-4.jpg",
+        "../images/salon-5.jpg",
+        "../images/salon-6.jpg",
     ]
 
 
     return(
       <div>
-        <div className="bg-[#5D4037] flex items-center justify-center  ">
+        <div className="bg-[#5D4037] flex flex-col sm:flex-row sm:items-center sm:justify-center   ">
             <div className="">
                 <div className="flex justify-center w-full text-4xl p-10 text-[#FFFFFF] ">La mejor peluqueria de Santa Croce Camerina</div>
                 <p className="text-white text-lg p-10">"¡Bienvenidos a HOW YOU WANT! Somos un equipo apasionado de estilistas y 

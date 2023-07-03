@@ -65,7 +65,7 @@ export default function Main () {
             </div>
         </div>
 
-        <Carrousel autoslide= {true}>
+        <Carrousel autoslide= {true} >
                 {[
                     ...slides.map((s) => <img src={s} />), ""
                 ]}

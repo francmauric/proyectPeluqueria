@@ -1,5 +1,7 @@
+import React from "react"
 import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "react-feather"
+
 
 export default function Carrousel ({ children: slides, autoslide= false, autoslideInterval = 3000 }) {
     const [curr, setCurr] = useState(0)
@@ -48,7 +50,9 @@ export default function Carrousel ({ children: slides, autoslide= false, autosli
                         <h1>Nuestro Salon</h1>
                         <p>Podras visualizar todos nuestros servicios </p>
             </div>
-            <div className="overflow-hidden relative h-full max-w-md ">
+            <div className="overflow-hidden relative h-full max-w-md rounded-tl-full shadow-[-30px_-40px_60px_-5px_rgba(0,0,0,0.3)]" 
+                
+                >
                <div className="flex transition-transform ease-out duration-500"
                 style={{ transform: `translateX(-${curr * 100}%)`}}
                   >

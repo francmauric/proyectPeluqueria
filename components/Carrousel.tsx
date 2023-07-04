@@ -45,12 +45,12 @@ export default function Carrousel ({ children: slides, autoslide= false, autosli
                 </div>
             </div>
         </div>
-        <div className="flex-wrap justify-around bg-gray-400 hidden sm:flex">
+        <div className="flex-wrap lg:justify-around bg-gray-400 hidden sm:flex lg:flex-row sm:flex-col sm:content-center">
             <div className="flex bg-gray-800">
                         <h1>Nuestro Salon</h1>
                         <p>Podras visualizar todos nuestros servicios </p>
             </div>
-            <div className="overflow-hidden relative h-full max-w-md rounded-tl-full shadow-[-30px_-40px_60px_-5px_rgba(0,0,0,0.3)]" 
+            <div className="overflow-hidden relative h-full  max-w-md sm:rounded-br-full rounded-tl-full shadow-[-30px_-40px_60px_-5px_rgba(0,0,0,0.3)]" 
                 
                 >
                <div className="flex transition-transform ease-out duration-500"

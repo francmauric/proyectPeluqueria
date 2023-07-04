@@ -45,10 +45,10 @@ export default function Carrousel ({ children: slides, autoslide= false, autosli
                 </div>
             </div>
         </div>
-        <div className="flex-wrap lg:justify-around bg-gray-400 hidden sm:flex lg:flex-row sm:flex-col sm:content-center">
-            <div className="flex bg-gray-800 flex-col content-center text-[#FFFFFF]" >
-                        <h1 className="text-center text-3xl p-5">Nuestro Salon</h1>
-                        <div className="p-4">
+        <div className="flex-wrap lg:justify-around bg-[#5D4037] hidden sm:flex lg:flex-row sm:flex-col sm:content-center">
+            <div className="flex bg-[#5D4037] flex-col content-center sm:w-5/6 lg:w-3/6 text-[#FFFFFF]" >
+                        <h1 className=" text-center text-3xl p-5">Nuestro Salon</h1>
+                        <div className="lg:p-4 sm: ">
                             <p >"En How You Want, nos enorgullece
                              ofrecerte una experiencia de belleza excepcional
                               en nuestro moderno y acogedor salón. Nuestro 
@@ -67,7 +67,8 @@ export default function Carrousel ({ children: slides, autoslide= false, autosli
                             <p> Recuerda adaptar el texto según las características específicas de tu peluquería y los servicios que ofrezcas. ¡Espero que este ejemplo sea útil para tu sección de imágenes y servicios! </p>
                         </div>        
             </div>
-            <div className="overflow-hidden relative h-full  max-w-md rounded-tl-full shadow-[-30px_-40px_60px_-5px_rgba(0,0,0,0.3)]" 
+                
+                <div className="overflow-hidden sm:h-full relative h-full  max-w-md rounded-tl-full shadow-[-30px_-40px_60px_-5px_rgba(0,0,0,0.3)]" 
                 
                 >
                <div className="flex transition-transform ease-out duration-500"
@@ -95,7 +96,7 @@ export default function Carrousel ({ children: slides, autoslide= false, autosli
                     ))}
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
         </div>
     )

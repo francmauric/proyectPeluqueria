@@ -1,9 +1,8 @@
 import React from "react"
+import { useEffect, useState } from "react";
 
 export default function Valoraciones ( {card}) {
-   /*  const card = [
-        {name: "Franco Mauricio Cuello", value: "Me atendio marcos, fue muy gentil con el trato y recibimiento de mi persona, desde el principio al final, son todos muy atentos"}
-      ] */
+    const [curr, setCurr] = useState(0);
 
     return(
         <div>
@@ -11,8 +10,18 @@ export default function Valoraciones ( {card}) {
             <div>
             {card.map((card) => (
                         <div>
-                           <h1>{card.name}</h1>
+                            <div className="flex-wrap lg:justify-around bg-[#5D4037] hidden sm:flex lg:flex-row sm:flex-col sm:content-center">
+                              <div className="overflow-hidden sm:h-full relative h-full  max-w-md ">  
+                                <div className="flex flex-wrap transition-transform ease-out duration-500"
+                                       style={{ transform: `translateX(-${curr * 100}%)` }}
+                                          >
+                                        <p>{card.value}</p>    
+                                        <h1>{card.name}</h1>
+                                </div>
+                              </div>  
+                            </div>
                             <p>{card.value}</p>
+                           <h1>{card.name}</h1>
                         </div>
                         
                         

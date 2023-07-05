@@ -65,6 +65,8 @@
     border-radius: 10px;
 }
 
+
+
 .gallery-item:hover .name {
     opacity: 1;
     transform: translateY(0);

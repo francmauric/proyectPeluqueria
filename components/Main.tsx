@@ -1,5 +1,6 @@
 import React from "react";
 import Carrousel from "./Carrousel";
+import Valoraciones from "./Valoraciones";
 
 export default function Main() {
   const slides = [
@@ -10,6 +11,11 @@ export default function Main() {
     "../images/salon-5.jpg",
     "../images/salon-6.jpg",
   ];
+
+  const card = [
+    {name: "Franco Mauricio Cuello", value: "Me atendio marcos, fue muy gentil con el trato y recibimiento de mi persona, desde el principio al final, son todos muy atentos"},
+    {name: "erick bana", value: "fue un servicio muy eficiente, hasta me hicieron olvidar que me convertia en hulk"}
+  ]
 
   return (
     <div>
@@ -68,6 +74,11 @@ export default function Main() {
           <Carrousel autoslide={true}>
             {[...slides.map((s) => <img src={s} />), ""]}
           </Carrousel>
+        </div>
+        <div>
+          <Valoraciones card = {card}>
+               
+          </Valoraciones>
         </div>
       </div>
     </div>

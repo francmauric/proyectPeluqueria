@@ -15,7 +15,7 @@ export default function Carrousel ({ children: slides, autoslide= false, autosli
         const slideInterval = setInterval(next, autoslideInterval)
         return () => clearInterval(slideInterval)
     }, [])
-
+    
     return(
         <div>
         <div className="overflow-hidden relative sm:hidden">

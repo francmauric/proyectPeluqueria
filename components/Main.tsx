@@ -13,9 +13,18 @@ export default function Main() {
   ];
 
   const card = [
-    {name: "Franco Mauricio Cuello", value: "Me atendio marcos, fue muy gentil con el trato y recibimiento de mi persona, desde el principio al final, son todos muy atentos"},
-    {name: "erick bana", value: "fue un servicio muy eficiente, hasta me hicieron olvidar que me convertia en hulk"}
-  ]
+    {
+      name: "Franco Mauricio Cuello",
+      value:
+        "Me atendio marcos, fue muy gentil con el trato y recibimiento de mi persona, desde el principio al final, son todos muy atentos",
+    },
+    {
+      name: "erick bana",
+      value:
+        "fue un servicio muy eficiente, hasta me hicieron olvidar que me convertia en hulk",
+    },
+    { name: "wolverine", value: "quede muy satisfecho con el servicio, hasta las uñas me limaron" },
+  ];
 
   return (
     <div>
@@ -75,14 +84,14 @@ export default function Main() {
             {[...slides.map((s) => <img src={s} />), ""]}
           </Carrousel>
         </div>
-        <div>
-          <Valoraciones card = {card} autoslide={true}>
-               {/* {[...card.map((c) => 
+      </div>
+      <div>
+        <Valoraciones card={card} autoslide={true}>
+          {/* {[...card.map((c) => 
                <div>
                    <h1>{c.name}</h1>
                </div>),""]} */}
-          </Valoraciones>
-        </div>
+        </Valoraciones>
       </div>
     </div>
   );

@@ -23,34 +23,37 @@ export default function Valoraciones({
 
   return (
     <div>
-      <div className="w-full h-16">
+      <div className="bg-green-600 flex justify-center w-full h-auto">
+        
+        <div className="border-orange-600 flex flex-row border-2 overflow-hidden bg-gray-400 sm:h-full relative  w-64 ">
         {card.map((card) => (
-          <div>
-            <div className=" overflow-hidden bg-gray-400 sm:h-full relative  max-w-lg ">
+          
               <div
-                className="flex flex-row w-36 transition-transform ease-out duration-500"
+                className=" border-2 border-yellow-400 w-96 transition-transform  ease-out h-24  duration-500"
                 style={{ transform: `translateX(-${curr * 100}%)` }}
               >
                 {card.name}
               </div>
-            <div className="absolute inset-0 flex items-center justify-between p-4">
+
+          
+               ))}
+          <div className="absolute inset-0 flex items-center justify-between p-4">
               <button
                 onClick={prev}
                 className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
                 >
-                <ChevronLeft size={40} />
+                <ChevronLeft size={10} />
               </button>
               <button
                 onClick={next}
                 className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
                 >
-                <ChevronRight size={40} />
+                <ChevronRight size={10} />
               </button>
-            </div>
           </div>
+        </div>
 
-          </div>
-        ))}
+
       </div>
     </div>
   );

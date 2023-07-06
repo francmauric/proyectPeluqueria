@@ -76,8 +76,11 @@ export default function Main() {
           </Carrousel>
         </div>
         <div>
-          <Valoraciones card = {card}>
-               
+          <Valoraciones card = {card} autoslide={true}>
+               {/* {[...card.map((c) => 
+               <div>
+                   <h1>{c.name}</h1>
+               </div>),""]} */}
           </Valoraciones>
         </div>
       </div>

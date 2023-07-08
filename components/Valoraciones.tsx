@@ -23,14 +23,15 @@ export default function Valoraciones({
 
   return (
     <div>
-      <div className="bg-green-600 flex justify-center w-full ">
+      <div className="bg-green-600 flex justify-center h-36 w-full ">
         
-        <div className="border-orange-600 flex flex-row border-2 overflow-hidden bg-gray-400 sm:h-full relative  h-full w-auto ">
+        <div className="border-orange-600 flex flex-row border-2 overflow-hidden bg-gray-400 sm:h-full h-36  ">
+              
         {card.map((card) => (
           
-              <div
-                className="border-2  flex flex-wrap flex-col border-yellow-400 w-56  transition-transform  ease-out   duration-500 "
-                style={{ transform: `translateX(-${curr * 100}%)` }}
+              <div 
+                className="border-2 flex flex-wrap flex-col border-yellow-400 w-96  transition-transform ease-out duration-500 "
+                style={{ transform: `translateX(-${curr * 100}%)`}}
               >
                 <h1>{card.name}</h1> 
                 <p>{card.value}</p>

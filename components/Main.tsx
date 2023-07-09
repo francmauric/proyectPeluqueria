@@ -1,6 +1,7 @@
 import React from "react";
 import Carrousel from "./Carrousel";
 import Valoraciones from "./Valoraciones";
+import Validaciones2 from "./Validaciones2";
 
 export default function Main() {
   const slides = [
@@ -24,6 +25,30 @@ export default function Main() {
         "fue un servicio muy eficiente, hasta me hicieron olvidar que me convertia en hulk",
     },
     { name: "wolverine", value: "quede muy satisfecho con el servicio, hasta las uñas me limaron" },
+     {
+      name: "Ana Martínez",
+      value: "Me encantó la atención en la peluquería. El personal fue amable y profesional, y el resultado final superó mis expectativas.",
+    },
+    {
+      name: "Pedro González",
+      value: "Excelente atención en la peluquería. Los estilistas son muy talentosos y se preocuparon por entender lo que quería. Salí muy satisfecho con mi nuevo look.",
+    },
+    {
+      name: "María Rodríguez",
+      value: "Recomiendo esta peluquería a todos. Me sentí bienvenida desde el momento en que entré y el personal hizo un trabajo increíble en mi cabello. Definitivamente volveré.",
+    },
+    {
+      name: "Luisa García",
+      value: "La atención en esta peluquería es de primera. Los estilistas son creativos y me dieron consejos útiles para el cuidado de mi cabello. ¡Los resultados hablan por sí mismos!",
+    },
+    {
+      name: "Carlos López",
+      value: "La peluquería ofrece un servicio excepcional. Los estilistas son pacientes y escuchan tus necesidades. Me encantó mi corte de pelo y el ambiente acogedor.",
+    },
+    {
+      name: "Laura Hernández",
+      value: "La mejor experiencia en una peluquería. El personal es profesional y amigable, y el resultado fue exactamente lo que quería. Definitivamente regresaré para mis próximos cambios de imagen.",
+    }
   ];
 
   return (
@@ -85,13 +110,9 @@ export default function Main() {
           </Carrousel>
         </div>
       </div>
+      
       <div>
-        <Valoraciones card={card} autoslide={true}>
-          {/* {[...card.map((c) => 
-               <div>
-                   <h1>{c.name}</h1>
-               </div>),""]} */}
-        </Valoraciones>
+        <Validaciones2 card={card} autoslide={true}/>
       </div>
     </div>
   );

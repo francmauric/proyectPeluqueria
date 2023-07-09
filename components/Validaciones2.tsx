@@ -14,9 +14,9 @@ export default function Validaciones2 ({card,autoslide = false,
     return () => clearInterval(slideInterval);
   }, []);
     return (
-        <div>
-            <h1 className="text-center">Probando Carousel 2</h1>
-            <div>
+        <div className="bg-[#5D4037] flex flex-col ">
+            <h1 className="text-center text-white text-3xl p-5">Reseñas de nuestros clientes</h1>
+            
             <div className="flex justify-center items-center">
       <div className="relative w-96 h-72">
         {card.map((card, index) => (
@@ -47,7 +47,7 @@ export default function Validaciones2 ({card,autoslide = false,
           >
             <ChevronRight size={16} />
           </button>
-        </div>
+        
       </div>
     </div>
             </div>

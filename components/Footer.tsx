@@ -1,20 +1,30 @@
+import React from "react";
+import ContainerItems from "./ContainerItems";
+
 export default function Footer () {
 
     return(
         <>
-            <div className="p-10 bg-gray-800 text-gray-200">
-                <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-1 md:flex-2 lg:flex-4 gap-2">
-
-                    </div>   
+            <div className="bg-gray-900 text-white">
+                <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[ffffff19]">
+                  <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
+                    <span className="text-teal-400">Free</span> until you're ready to launch
+                  </h1>
+                  <div>
+                    <input 
+                        type="text" 
+                        placeholder="Enter Your ph.no"
+                        className="text-gray-800 sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"
+                        />
+                    <button className="bg-teal-400 hover:bg-teal-500 duration-300 px-5 py-2.5 font-[Poppins]
+                       rounded-md text-white md:w-auto w-full ">
+                        Request Code
+                    </button>   
+                  </div>
                 </div>
+                <ContainerItems />
             </div>
-            {/* <div className="flex flex-wrap text-white text-2xl opacity-70 hover:opacity-100  items-center justify-around w-full h-36 bg-gray-900" >
-                <h2 className="p-3 cursor-pointer hover:text-indigo-600">Linkedin</h2>
-                <h2 className="p-3 cursor-pointer hover:text-indigo-600" >Instagram</h2>
-                <h2 className="p-3 cursor-pointer hover:text-indigo-600">Facebook</h2>
-                <h2 className="p-3 cursor-pointer hover:text-indigo-600">Twitter</h2>
-            </div> */}
+            
         </>
     )
 }

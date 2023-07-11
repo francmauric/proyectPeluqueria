@@ -9,6 +9,7 @@ export default function ContainerItems () {
             <Item Links={RESOURCES} title="RESOURCES"/>
             <Item Links={COMPANY} title="COMPANY"/>
             <Item Links={SUPPORT} title="SUPPORT"/>
+            
         </div>
     )
 }

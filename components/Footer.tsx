@@ -1,5 +1,8 @@
 import React from "react";
 import ContainerItems from "./ContainerItems";
+import { Icons } from "./Menu"
+import SocialIcons from "./SocialIcons";
+
 
 export default function Footer () {
 
@@ -23,6 +26,12 @@ export default function Footer () {
                   </div>
                 </div>
                 <ContainerItems />
+                <div 
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center pt-2 text-gray400 text-sm pb-8">
+                      <span>© 2020 Appy. All rights reserved.</span>
+                      <span>Terms - Privacy Policy</span>
+                      <SocialIcons  />
+                </div>
             </div>
             
         </>

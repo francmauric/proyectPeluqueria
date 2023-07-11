@@ -1,6 +1,6 @@
 import React from "react";
 import Carrousel from "./Carrousel";
-import Valoraciones from "./Valoraciones";
+
 import Validaciones2 from "./Validaciones2";
 
 export default function Main() {

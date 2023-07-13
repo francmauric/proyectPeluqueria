@@ -22,10 +22,13 @@ export default function NavBar () {
                 <button onClick={handleOpenModal} className="bg-indigo-500  h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded ">
                     <h2 className="">Turnos Online</h2></button>
             </div>
-            <Modal isOpen={isOpen} onRequestClose={handleCloseModal}>
+            <div className=" justify-center">
+            <Modal className="bg-orange-900  text-center flex-col flex items-center lg:max-w-[80%] lg:max-h-[50%] ]" isOpen={isOpen} onRequestClose={handleCloseModal}>
                 <h2>Formulario de reserva</h2>
+
                 <button onClick={handleCloseModal} >Cerrar</button>
             </Modal>
+            </div>
         </>
     )
 }

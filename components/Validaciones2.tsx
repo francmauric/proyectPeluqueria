@@ -1,56 +1,62 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
-export default function Validaciones2 ({card,autoslide = false,
-    autoslideInterval = 3000,}) {
-    const [curr, setCurr] = useState(0);
+export default function Validaciones2({
+  card,
+  autoslide = false,
+  autoslideInterval = 3000,
+}) {
+  const [curr, setCurr] = useState(0);
 
-  const prev = () => setCurr((curr) => (curr === 0 ? card.length - 1 : curr - 1));
-  const next = () => setCurr((curr) => (curr === card.length - 1 ? 0 : curr + 1));
+  const prev = () =>
+    setCurr((curr) => (curr === 0 ? card.length - 1 : curr - 1));
+  const next = () =>
+    setCurr((curr) => (curr === card.length - 1 ? 0 : curr + 1));
 
   useEffect(() => {
     if (!autoslide) return;
     const slideInterval = setInterval(next, autoslideInterval);
     return () => clearInterval(slideInterval);
   }, []);
-    return (
-        <div className="bg-[#5D4037] flex flex-col ">
-            <h1 className="text-center text-white text-3xl p-5">Reseñas de nuestros clientes</h1>
-            
-            <div className="flex justify-center items-center">
-      <div className="relative w-96 h-72">
-        {card.map((card, index) => (
-          <div
-            key={index}
-            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-              index === curr ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h2 className="text-xl font-semibold mb-2">{card.name}</h2>
-              <p>{card.value}</p>
+  return (
+    <div className="bg-[#5D4037] flex flex-col ">
+      <h1 className="text-center text-white text-3xl p-5">
+        Reseñas de nuestros clientes
+      </h1>
+
+      <div className="flex justify-center items-center">
+        <div className="relative w-96 h-72">
+          {card.map((card, index) => (
+            <div
+              key={index}
+              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+                index === curr ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <div className="bg-white p-4 rounded-lg shadow">
+                <h2 className="text-xl font-semibold mb-2">{card.name}</h2>
+                <p>{card.value}</p>
+              </div>
             </div>
+          ))}
+          <div className="absolute inset-y-1/2 left-0 flex items-center">
+            <button
+              onClick={prev}
+              className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            >
+              <ChevronLeft size={16} />
+            </button>
           </div>
-        ))}
-        <div className="absolute inset-y-1/2 left-0 flex items-center">
-          <button
-            onClick={prev}
-            className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-          >
-            <ChevronLeft size={16} />
-          </button>
+          <div className="absolute inset-y-1/2 right-0 flex items-center">
+            <button
+              onClick={next}
+              className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
         </div>
-        <div className="absolute inset-y-1/2 right-0 flex items-center">
-          <button
-            onClick={next}
-            className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-          >
-            <ChevronRight size={16} />
-          </button>
-        
       </div>
     </div>
-            </div>
-        </div>
-    )
+  );
 }

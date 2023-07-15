@@ -3,7 +3,32 @@ import React, {useState} from "react";
 
 export default function NavBar () {
     const [isOpen, setIsOpen] = useState(false)
+    const [category, setCategory] = useState("")
+    const [service, setService] = useState("")
+    const [serviceOptions, setServiceOptions] = useState([])
 
+    const handleCategoryChange = (e) => {
+        const selectedCategory = e.target.value;
+        setCategory(selectedCategory)
+        
+        if(selectedCategory === "hombres") {
+            setServiceOptions(["cortes","barba","color"]);
+        } else if (selectedCategory === "mujer") {
+            setServiceOptions(["color", "alisado", "tratamiento"]);
+        } else {
+            setServiceOptions([]);
+        }
+        
+        setService("");
+    }
+        
+
+    const handleServiceChange = (e) => {
+        setService(e.target.value);
+    }
+
+
+    /* ventana emergente modal */
     const handleOpenModal = () => {
         setIsOpen(true);
     }
@@ -34,11 +59,11 @@ export default function NavBar () {
                 <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" />
                     <input type="text" placeholder="apellido" />
-                    <label htmlFor="" name="categoria">Categoria</label>
-                    <select name=""  id="">Categoria
-                        <option value="">Selecciona categoria</option>
+                    <label htmlFor="categoria" >Categoria</label>
+                    <select name=""  id="categoria" value={category} onChange={handleCategoryChange} > 
+                        <option value="" selected>Selecciona categoria</option>
                         <option value="">Peinados</option>
-                        <option value="">Hombres</option>
+                        <option value="hombres">Hombres</option>
                         <option value="">Color</option>
                         <option value="">Cortes</option>
                         <option value="">Mechas</option>
@@ -46,16 +71,17 @@ export default function NavBar () {
                         <option value="">Tratamientos</option>
                     </select>
                     <label htmlFor="">Servicios</label>
-                    <select name="" id="">
-                        <option value="">Seleccion Servicio</option>
-                        <option value="">Hombres</option>
-                        <option value="">Hombres</option>
-                        <option value="">Hombres</option>
-                        <option value="">Hombres</option>
+                    <select name="" id="service" value={service} onChange={handleServiceChange} disabled={!category}>
+                        <option value="" selected>Seleccion Servicio</option>
+                        {serviceOptions.map((option) => (
+                            <option key={option} value={option}>
+                                {option}
+                            </option>
+                        ))}
                     </select>
                 </form>
 
-                <button onClick={handleCloseModal} >Cerrar</button>
+                <button onClick={handleCloseModal}>Cerrar</button>
                 </div>
             </div>  
 

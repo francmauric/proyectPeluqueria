@@ -31,12 +31,26 @@ export default function NavBar () {
                </div>
                <div className="bg-orange-400 ">
                 <h2>Formulario de reserva</h2>
-                <form action="" >
+                <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" />
                     <input type="text" placeholder="apellido" />
-                    <select name="categoria" placeholder="selecciona categoria" id="">Categoria
-                        <option value="">
-                        <option value="">Hombres</option>Peinados</option>
+                    <label htmlFor="" name="categoria">Categoria</label>
+                    <select name=""  id="">Categoria
+                        <option value="">Selecciona categoria</option>
+                        <option value="">Peinados</option>
+                        <option value="">Hombres</option>
+                        <option value="">Color</option>
+                        <option value="">Cortes</option>
+                        <option value="">Mechas</option>
+                        <option value="">Alisados</option>
+                        <option value="">Tratamientos</option>
+                    </select>
+                    <label htmlFor="">Servicios</label>
+                    <select name="" id="">
+                        <option value="">Seleccion Servicio</option>
+                        <option value="">Hombres</option>
+                        <option value="">Hombres</option>
+                        <option value="">Hombres</option>
                         <option value="">Hombres</option>
                     </select>
                 </form>

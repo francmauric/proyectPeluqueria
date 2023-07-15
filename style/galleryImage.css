@@ -113,3 +113,15 @@
     
 
 }
+
+.modal{
+    align-self: center;
+    
+    width: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    /* background: #bf4e2b; */
+    
+}
+

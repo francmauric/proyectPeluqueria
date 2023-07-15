@@ -22,12 +22,29 @@ export default function NavBar () {
                 <button onClick={handleOpenModal} className="bg-indigo-500  h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded ">
                     <h2 className="">Turnos Online</h2></button>
             </div>
-            <div className=" flex justify-center">
+            <div className="containerModal">
                 
-            <Modal className="bg-orange-900  text-center flex-col flex items-center lg:max-w-[80%] lg:max-h-[50%] ]" isOpen={isOpen} onRequestClose={handleCloseModal}>
+            <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
+            <div className="bg-orange-300 flex justify-center">
+               <div >
+                <img  src="./images/logo-HYW.png" alt="" />
+               </div>
+               <div className="bg-orange-400 ">
                 <h2>Formulario de reserva</h2>
+                <form action="" >
+                    <input type="text" placeholder="nombre" />
+                    <input type="text" placeholder="apellido" />
+                    <select name="categoria" placeholder="selecciona categoria" id="">Categoria
+                        <option value="">
+                        <option value="">Hombres</option>Peinados</option>
+                        <option value="">Hombres</option>
+                    </select>
+                </form>
 
                 <button onClick={handleCloseModal} >Cerrar</button>
+                </div>
+            </div>  
+
             </Modal>
             </div>
         </>

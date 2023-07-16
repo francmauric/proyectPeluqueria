@@ -12,9 +12,19 @@ export default function NavBar () {
         setCategory(selectedCategory)
         
         if(selectedCategory === "hombres") {
-            setServiceOptions(["cortes","barba","color"]);
-        } else if (selectedCategory === "mujer") {
-            setServiceOptions(["color", "alisado", "tratamiento"]);
+            setServiceOptions(["cortes masculino","barba diseño","barba retoque", "color", "cejas"]);
+        } else if (selectedCategory === "color") {
+            setServiceOptions(["Color Experience Schwarzkopf", "Baño de Color Vibrance", "Decoloracion en raiz", "Color TBH"]);
+        } else if(selectedCategory === "cortes") {
+            setServiceOptions(["Cortes sin Peinar", "Cortes con peinados", "Cambio de look"])
+        } else if(selectedCategory === "peinados") {
+            setServiceOptions(["Peinado Cabello Corto", "Peinado Cabello Medio", "Peinado Cabello Largo"])
+        } else if(selectedCategory === "mechas") {
+            setServiceOptions(["Balayage", "Baby Lights", "Melting"])
+        } else if(selectedCategory === "alisados") {
+            setServiceOptions(["Tratamiento Keratina Onlys", "Alisado Organico"])
+        } else if(selectedCategory === "tratamientos") {
+            setServiceOptions(["Tratamiento de Brillo", "Stop Descamacion", "Tratamiento Anticaida"])
         } else {
             setServiceOptions([]);
         }
@@ -62,13 +72,13 @@ export default function NavBar () {
                     <label htmlFor="categoria" >Categoria</label>
                     <select name=""  id="categoria" value={category} onChange={handleCategoryChange} > 
                         <option value="" selected>Selecciona categoria</option>
-                        <option value="">Peinados</option>
+                        <option value="mechas">Mechas</option>
                         <option value="hombres">Hombres</option>
-                        <option value="">Color</option>
-                        <option value="">Cortes</option>
-                        <option value="">Mechas</option>
-                        <option value="">Alisados</option>
-                        <option value="">Tratamientos</option>
+                        <option value="color">Color</option>
+                        <option value="cortes">Cortes</option>
+                        <option value="peinados">Peinados</option>
+                        <option value="alisados">Alisados</option>
+                        <option value="tratamientos">Tratamientos</option>
                     </select>
                     <label htmlFor="">Servicios</label>
                     <select name="" id="service" value={service} onChange={handleServiceChange} disabled={!category}>

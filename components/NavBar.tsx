@@ -6,7 +6,14 @@ export default function NavBar () {
     const [category, setCategory] = useState("")
     const [service, setService] = useState("")
     const [serviceOptions, setServiceOptions] = useState([])
+    const [selectedDate, setSelectedDate] = useState("")
 
+
+    const handleDateChange = (e) => {
+        setSelectedDate(e.target.value)
+        
+    }
+    console.log(selectedDate)
     const handleCategoryChange = (e) => {
         const selectedCategory = e.target.value;
         setCategory(selectedCategory)
@@ -60,11 +67,11 @@ export default function NavBar () {
             <div className="containerModal">
                 
             <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
-            <div className="bg-orange-300 flex justify-center">
-               <div >
-                <img  src="./images/logo-HYW.png" alt="" />
+            <div className="bg-orange-300 flex justify-center w-[60%]">
+               <div className="flex ">
+                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-orange-400 ">
+               <div className="bg-orange-400 h-80 w-[100%] ">
                 <h2>Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" />
@@ -89,6 +96,8 @@ export default function NavBar () {
                             </option>
                         ))}
                     </select>
+                    <label htmlFor="calendario">Fecha</label>
+                    <input type="date" value={selectedDate} onChange={handleDateChange} />
                 </form>
 
                 <button onClick={handleCloseModal}>Cerrar</button>

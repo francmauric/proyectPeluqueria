@@ -54,6 +54,17 @@ export default function NavBar () {
         setIsOpen(false)
     }
 
+    const handleNext = () => {
+        
+        if(selectedDate) {
+            console.log("fecha seleccionada")
+            handleCloseModal()
+            openNextModal()
+        } else {
+            alert("por favor, selecciona una fecha")
+        }
+    }
+
 
     return(
         <>
@@ -99,7 +110,8 @@ export default function NavBar () {
                     <label htmlFor="calendario">Fecha</label>
                     <input type="date" value={selectedDate} onChange={handleDateChange} />
                 </form>
-
+                
+                <button onClick={handleNext} >Siguiente</button>            
                 <button onClick={handleCloseModal}>Cerrar</button>
                 </div>
             </div>  

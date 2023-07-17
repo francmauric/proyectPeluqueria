@@ -7,6 +7,12 @@ export default function NavBar () {
     const [service, setService] = useState("")
     const [serviceOptions, setServiceOptions] = useState([])
     const [selectedDate, setSelectedDate] = useState("")
+    /* segunda ventana */
+    const [isNextModalOpen, setIsNextModalOpen] = useState(false)
+    const [selectedTime,setSelectedTime] = useState("")
+    /* tercera ventana */
+    const [isNextModalOpen3, setIsNextModalOpen3] = useState(false)
+
 
 
     const handleDateChange = (e) => {
@@ -45,7 +51,7 @@ export default function NavBar () {
     }
 
 
-    /* ventana emergente modal */
+    /* ventana emergente modal 1 */
     const handleOpenModal = () => {
         setIsOpen(true);
     }
@@ -53,6 +59,8 @@ export default function NavBar () {
     const handleCloseModal = () => {
         setIsOpen(false)
     }
+
+    /* ventana emergente modal 2 */
 
     const handleNext = () => {
         
@@ -64,6 +72,49 @@ export default function NavBar () {
             alert("por favor, selecciona una fecha")
         }
     }
+
+ 
+    const openNextModal = () => {
+        setIsNextModalOpen(true);
+    };
+    const closeNextModal= () => {
+        setIsNextModalOpen(false)
+    }
+
+    /* ventana emergente modal 3 */
+    const handleNext3 = () => {
+        if(selectedTime) {
+            console.log("horario seleccionado")
+            closeNextModal()
+            openNextModal3()
+        }else{
+            alert("por favor, selecciona un horario")
+        }
+
+    }
+    const openNextModal3 = () =>{
+        setIsNextModalOpen3(true);
+    }
+    const closeNextModal3 = () =>{
+        setIsNextModalOpen3(false)
+    }
+
+    /* horario */
+    const horario = ["9:00","9:15","9:30","9:15","9:30"]
+
+    const handleSelectTime = (time) => {
+        setSelectedTime(time)
+    }
+    /* confirmar */
+    /* const handleConfirm = () => {
+        is (selectedTime) {
+            console.log("horario seleccionado: ${selectedTime}")
+
+            closeNextModal();
+        }else {
+            alert("por favor, selecciona un horario")
+        }
+    } */
 
 
     return(
@@ -115,6 +166,43 @@ export default function NavBar () {
                 <button onClick={handleCloseModal}>Cerrar</button>
                 </div>
             </div>  
+
+            </Modal>
+            <Modal className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
+            <div className="bg-orange-300 flex justify-center w-[60%]">
+               <div className="flex ">
+                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+               </div>
+               <div className="bg-orange-400 h-80 w-[100%] ">
+                            <h2>Seleccionar Horario</h2>
+                            {horario.map((time) => (
+                                <label key={time}>
+                                <input type="checkbox" 
+                                    value={time}
+                                    onChange={() => handleSelectTime(time)}
+                                    onClick={handleNext3}
+                                />
+                                {time}
+                                </label>
+                            ))}
+                            <button onClick={closeNextModal}>Cerrar</button>
+                            {/* <button onClick={handleConfirm}>Confirmar</button> */}
+               
+                
+                </div>
+            </div> 
+            </Modal>
+            <Modal className="modal" isOpen={isNextModalOpen3} onRequestClose={closeNextModal3}>
+            <div className="bg-orange-300 flex justify-center w-[60%]">
+               <div className="flex ">
+                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+               </div>
+               <div className="bg-orange-400 h-80 w-[100%] ">
+                            <h2>Seleccionar Siguiente</h2>
+                           
+                
+                </div>
+            </div>
 
             </Modal>
             </div>

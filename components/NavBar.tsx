@@ -198,7 +198,14 @@ export default function NavBar () {
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-orange-400 h-80 w-[100%] ">
-                           
+                <form action="" className="flex flex-col">
+                    <label htmlFor="">Numero de telefono</label>
+                    <input type="number" />
+                    <label htmlFor="">Email</label>
+                    <input type="text" />
+                    <label htmlFor="">Nota</label>
+                    <input type="text" />
+                </form>
                            
                <button onClick={handleNext} >Siguiente</button>            
                 <button onClick={closeNextModal3}>Cerrar</button>

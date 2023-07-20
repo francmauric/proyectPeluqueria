@@ -198,9 +198,10 @@ export default function NavBar () {
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-orange-400 h-80 w-[100%] ">
-                            <h2>Seleccionar Siguiente</h2>
                            
-                
+                           
+               <button onClick={handleNext} >Siguiente</button>            
+                <button onClick={closeNextModal3}>Cerrar</button>
                 </div>
             </div>
 

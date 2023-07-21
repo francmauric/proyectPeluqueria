@@ -98,6 +98,9 @@ export default function NavBar () {
     const closeNextModal3 = () =>{
         setIsNextModalOpen3(false)
     }
+    /* const handlePrevius = () =>{
+        setIsNe
+    } */
 
     /* horario */
     const horario = ["9:00","9:15","9:30","9:15","9:30"]
@@ -134,7 +137,7 @@ export default function NavBar () {
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-orange-400 h-80 w-[100%] ">
-                <h2>Formulario de reserva</h2>
+                <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" />
                     <input type="text" placeholder="apellido" />
@@ -174,13 +177,14 @@ export default function NavBar () {
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-orange-400 h-80 w-[100%] ">
-                            <h2>Seleccionar Horario</h2>
+                            <h2 className="text-2xl">Seleccionar Horario</h2>
                             {horario.map((time) => (
-                                <label key={time}>
+                                <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded">
                                 <input type="checkbox" 
                                     value={time}
                                     onChange={() => handleSelectTime(time)}
                                     onClick={handleNext3}
+                                    className="form-checkbox h-5 w-5 text-blue-600"
                                 />
                                 {time}
                                 </label>
@@ -206,7 +210,7 @@ export default function NavBar () {
                     <label htmlFor="">Nota</label>
                     <input type="text" />
                 </form>
-                           
+                         
                <button onClick={handleNext} >Siguiente</button>            
                 <button onClick={closeNextModal3}>Cerrar</button>
                 </div>

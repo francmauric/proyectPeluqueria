@@ -103,7 +103,7 @@ export default function NavBar () {
     } */
 
     /* horario */
-    const horario = ["9:00","9:15","9:30","9:15","9:30"]
+    const horario = ["09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00","17:15","17:30","17:45"]
 
     const handleSelectTime = (time) => {
         setSelectedTime(time)
@@ -136,13 +136,13 @@ export default function NavBar () {
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-orange-400 h-80 w-[100%] ">
+               <div className="bg-orange-400  w-[100%] ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
-                    <input type="text" placeholder="nombre" />
-                    <input type="text" placeholder="apellido" />
+                    <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="text" placeholder="apellido" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="categoria" >Categoria</label>
-                    <select name=""  id="categoria" value={category} onChange={handleCategoryChange} > 
+                    <select name="" className="rounded-lg py-1 m-2 w-80" id="categoria" value={category} onChange={handleCategoryChange} > 
                         <option value="" selected>Selecciona categoria</option>
                         <option value="mechas">Mechas</option>
                         <option value="hombres">Hombres</option>
@@ -153,7 +153,7 @@ export default function NavBar () {
                         <option value="tratamientos">Tratamientos</option>
                     </select>
                     <label htmlFor="">Servicios</label>
-                    <select name="" id="service" value={service} onChange={handleServiceChange} disabled={!category}>
+                    <select name="" id="service" className="rounded-lg py-1 m-2 w-80" value={service} onChange={handleServiceChange} disabled={!category}>
                         <option value="" selected>Seleccion Servicio</option>
                         {serviceOptions.map((option) => (
                             <option key={option} value={option}>
@@ -161,8 +161,8 @@ export default function NavBar () {
                             </option>
                         ))}
                     </select>
-                    <label htmlFor="calendario">Fecha</label>
-                    <input type="date" value={selectedDate} onChange={handleDateChange} />
+                    <label htmlFor="calendario" >Fecha</label>
+                    <input type="date" className="rounded-lg py-1 m-2 w-36" value={selectedDate} onChange={handleDateChange} />
                 </form>
                 
                 <button onClick={handleNext} >Siguiente</button>            
@@ -176,7 +176,7 @@ export default function NavBar () {
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-orange-400 h-80 w-[100%] ">
+               <div className="bg-orange-400 w-[100%] ">
                             <h2 className="text-2xl">Seleccionar Horario</h2>
                             {horario.map((time) => (
                                 <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded">
@@ -203,12 +203,12 @@ export default function NavBar () {
                </div>
                <div className="bg-orange-400 h-80 w-[100%] ">
                 <form action="" className="flex flex-col">
-                    <label htmlFor="">Numero de telefono</label>
-                    <input type="number" />
-                    <label htmlFor="">Email</label>
-                    <input type="text" />
-                    <label htmlFor="">Nota</label>
-                    <input type="text" />
+                    <label htmlFor="" className="text-lg">Numero de telefono</label>
+                    <input type="number" className="rounded-lg py-1"/>
+                    <label htmlFor="" className="text-lg">Email</label>
+                    <input type="text" className="rounded-lg py-1"/>
+                    <label htmlFor="" className="text-lg">Nota</label>
+                    <input type="text" className="rounded-lg py-1" />
                 </form>
                          
                <button onClick={handleNext} >Siguiente</button>            

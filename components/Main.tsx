@@ -53,7 +53,7 @@ export default function Main() {
 
   return (
     <div>
-      <div className="bg-[#5D4037] flex flex-col sm:flex-row sm:items-center sm:justify-center   ">
+      <div  id="service" className="bg-[#5D4037] flex flex-col sm:flex-row sm:items-center sm:justify-center   ">
         <div className="">
           <div className="flex justify-center w-full text-4xl p-10 text-[#FFFFFF] ">
             La mejor peluqueria de Santa Croce Camerina
@@ -103,7 +103,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className=" flex flex-col items-center">
+      <div id="salon" className=" flex flex-col items-center">
         <div>
           <Carrousel autoslide={true}>
             {[...slides.map((s) => <img src={s} />), ""]}

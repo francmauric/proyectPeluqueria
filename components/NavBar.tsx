@@ -105,7 +105,7 @@ export default function NavBar () {
     /* horario */
     const horario = ["09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00","17:15","17:30","17:45"]
 
-    const handleSelectTime = (time) => {
+    const handleSelectTime = (time: React.SetStateAction<string>) => {
         setSelectedTime(time)
     }
     /* confirmar */
@@ -123,20 +123,20 @@ export default function NavBar () {
     return(
         <>
             <div className="  text-white text-2xl opacity-70 hover:bg-white hover:opacity-90 justify-around w-full h-20 bg-gray-500  hidden sm:flex" >
-                <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14">Home</h2>
-                <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14" >Servicios</h2>
-                <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14">Nuestro Salon</h2>
+                <a href="" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14">Home</a>
+                <a href="#service" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14" >Servicios</a>
+                <a href="#salon" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14">Nuestro Salon</a>
                 <button onClick={handleOpenModal} className="bg-indigo-500  h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded ">
                     <h2 className="">Turnos Online</h2></button>
             </div>
             <div className="containerModal">
                 
             <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
-            <div className="bg-orange-300 flex justify-center w-[60%]">
+            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-orange-400  w-[100%] ">
+               <div className="bg-gradient-to-b from-orange-500 to-gray-400  w-[100%] ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 w-80"/>
@@ -165,18 +165,18 @@ export default function NavBar () {
                     <input type="date" className="rounded-lg py-1 m-2 w-36" value={selectedDate} onChange={handleDateChange} />
                 </form>
                 
-                <button onClick={handleNext} >Siguiente</button>            
+                <button onClick={handleNext} className="p-2 text-xl hover:" >Siguiente</button>            
                 <button onClick={handleCloseModal}>Cerrar</button>
                 </div>
             </div>  
 
             </Modal>
             <Modal className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
-            <div className="bg-orange-300 flex justify-center w-[60%]">
+            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-orange-400 w-[100%] ">
+               <div className="bg-gradient-to-b from-orange-500 to-gray-400 w-[100%] ">
                             <h2 className="text-2xl">Seleccionar Horario</h2>
                             {horario.map((time) => (
                                 <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded">
@@ -184,7 +184,7 @@ export default function NavBar () {
                                     value={time}
                                     onChange={() => handleSelectTime(time)}
                                     onClick={handleNext3}
-                                    className="form-checkbox h-5 w-5 text-blue-600"
+                                    className="form-checkbox hidden h-5 w-5 text-blue-600"
                                 />
                                 {time}
                                 </label>
@@ -197,11 +197,11 @@ export default function NavBar () {
             </div> 
             </Modal>
             <Modal className="modal" isOpen={isNextModalOpen3} onRequestClose={closeNextModal3}>
-            <div className="bg-orange-300 flex justify-center w-[60%]">
+            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-orange-400 h-80 w-[100%] ">
+               <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80 w-[100%] ">
                 <form action="" className="flex flex-col">
                     <label htmlFor="" className="text-lg">Numero de telefono</label>
                     <input type="number" className="rounded-lg py-1"/>

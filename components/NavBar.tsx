@@ -165,7 +165,9 @@ export default function NavBar () {
                     <input type="date" className="rounded-lg py-1 m-2 w-36" value={selectedDate} onChange={handleDateChange} />
                 </form>
                 
-                <button onClick={handleNext} className="p-2 text-xl hover:" >Siguiente</button>            
+                <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 transition-all"></span>
+                    Siguiente</button>            
                 <button onClick={handleCloseModal}>Cerrar</button>
                 </div>
             </div>  

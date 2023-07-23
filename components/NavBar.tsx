@@ -168,7 +168,9 @@ export default function NavBar () {
                 <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >
                 <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 transition-all"></span>
                     Siguiente</button>            
-                <button onClick={handleCloseModal}>Cerrar</button>
+                <button className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" onClick={handleCloseModal}>
+                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 transition-all"></span>
+                    Cerrar</button>
                 </div>
             </div>  
 
@@ -213,8 +215,8 @@ export default function NavBar () {
                     <input type="text" className="rounded-lg py-1" />
                 </form>
                          
-               <button onClick={handleNext} >Siguiente</button>            
-                <button onClick={closeNextModal3}>Cerrar</button>
+               <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            
+                <button onClick={closeNextModal3} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold">Cerrar</button>
                 </div>
             </div>
 

@@ -1,6 +1,7 @@
 import Modal from "react-modal";
 import React, {useState} from "react";
 
+
 export default function NavBar () {
     const [isOpen, setIsOpen] = useState(false)
     const [category, setCategory] = useState("")
@@ -162,7 +163,7 @@ export default function NavBar () {
                         ))}
                     </select>
                     <label htmlFor="calendario" >Fecha</label>
-                    <input type="date" className="rounded-lg py-1 m-2 w-36" value={selectedDate} onChange={handleDateChange} />
+                    <input min={24} type="date" className="rounded-lg py-1 m-2 w-36" value={selectedDate} onChange={handleDateChange} />
                 </form>
                 
                 <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >
@@ -194,7 +195,7 @@ export default function NavBar () {
                                 </label>
                             ))}
                             <button onClick={closeNextModal}>Cerrar</button>
-                            {/* <button onClick={handleConfirm}>Confirmar</button> */}
+                            
                
                 
                 </div>
@@ -221,6 +222,8 @@ export default function NavBar () {
             </div>
 
             </Modal>
+            
+            
             </div>
         </>
     )

@@ -44,8 +44,9 @@ export default function Validaciones2({
               onClick={prev}
               className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
             >
-              <ChevronLeft size={16} />
+              <ChevronLeft size={16}  />
             </button>
+            
           </div>
           <div className="absolute inset-y-1/2 right-0 flex items-center">
             <button

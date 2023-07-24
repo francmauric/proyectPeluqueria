@@ -1,27 +1,27 @@
 export const PRODUCTS = [
-    { name: "Drag And Drop", link: "#" },
+    { name: "Arrastrar y soltar", link: "#" },
     { name: "Visual Studio X", link: "#" },
-    { name: "Easy Content", link: "#" },
+    { name: "Contenido facil", link: "#" },
   ];
   export const RESOURCES = [
-    { name: "Industries and tools", link: "#" },
-    { name: "Use cases", link: "#" },
+    { name: "Industrias y herramientas", link: "#" },
+    { name: "Casos de usos", link: "#" },
     { name: "Blog", link: "#" },
-    { name: "Online evenet", link: "#" },
-    { name: "Nostrud exercitation", link: "#" },
+    { name: "Evento en linea", link: "#" },
+    { name: "Ejercicio de nostrud", link: "#" },
   ];
   export const COMPANY = [
-    { name: "Diversity & inclusion", link: "#" },
-    { name: "About us", link: "#" },
-    { name: "Press", link: "#" },
-    { name: "Customer Stories", link: "#" },
-    { name: "Online communities", link: "#" },
+    { name: "Diversidad e inclusion", link: "#" },
+    { name: "Sobre nosotros", link: "#" },
+    { name: "Prensa", link: "#" },
+    { name: "Historias de clientes", link: "#" },
+    { name: "Comunidades en linea", link: "#" },
   ];
   export const SUPPORT = [
-    { name: "Documentation", link: "#" },
-    { name: "Tutorials & guides", link: "#" },
-    { name: "Webinars", link: "#" },
-    { name: "Open-source", link: "#" },
+    { name: "Documentacion", link: "#" },
+    { name: "Tutoriales y guias", link: "#" },
+    { name: "Seminarios web", link: "#" },
+    { name: "Codigo abierto", link: "#" },
   ];
   
   export const Icons = [

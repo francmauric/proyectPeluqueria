@@ -137,7 +137,7 @@ export default function NavBar () {
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-gradient-to-b from-orange-500 to-gray-400  w-[100%] ">
+               <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 w-80"/>
@@ -181,7 +181,7 @@ export default function NavBar () {
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-gradient-to-b from-orange-500 to-gray-400 w-[100%] ">
+               <div className="bg-gradient-to-b from-orange-500 to-gray-400 w-[100%]">
                             <h2 className="text-2xl">Seleccionar Horario</h2>
                             {horario.map((time) => (
                                 <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded">
@@ -194,7 +194,7 @@ export default function NavBar () {
                                 {time}
                                 </label>
                             ))}
-                            <button onClick={closeNextModal}>Cerrar</button>
+                            <button onClick={closeNextModal} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold">Cerrar</button>
                             
                
                 
@@ -206,14 +206,14 @@ export default function NavBar () {
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80 w-[100%] ">
+               <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
                 <form action="" className="flex flex-col">
                     <label htmlFor="" className="text-lg">Numero de telefono</label>
-                    <input type="number" className="rounded-lg py-1"/>
+                    <input type="number" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Email</label>
-                    <input type="text" className="rounded-lg py-1"/>
+                    <input type="text" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Nota</label>
-                    <input type="text" className="rounded-lg py-1" />
+                    <input type="text" className="rounded-lg py-1 m-2 w-80" />
                 </form>
                          
                <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            

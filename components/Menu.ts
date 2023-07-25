@@ -14,7 +14,7 @@ export const PRODUCTS = [
     { name: "Diversidad e inclusion", link: "#" },
     { name: "Sobre nosotros", link: "#" },
     { name: "Prensa", link: "#" },
-    { name: "Historias de clientes", link: "#" },
+    { name: "Historias de clientes", link: "#validaciones" },
     { name: "Comunidades en linea", link: "#" },
   ];
   export const SUPPORT = [

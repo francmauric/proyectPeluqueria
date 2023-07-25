@@ -2,6 +2,7 @@ import React from "react";
 import Carrousel from "./Carrousel";
 
 import Validaciones2 from "./Validaciones2";
+import Direccion from "./Direccion";
 
 export default function Main() {
   const slides = [
@@ -113,6 +114,9 @@ export default function Main() {
       
       <div>
         <Validaciones2 card={card} autoslide={true}/>
+      </div>
+      <div>
+        <Direccion />
       </div>
     </div>
   );

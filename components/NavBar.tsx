@@ -123,7 +123,7 @@ export default function NavBar () {
 
     return(
         <>
-            <div className="  text-white text-2xl opacity-70 hover:bg-white hover:opacity-90 justify-around w-full h-20 bg-gray-500  hidden sm:flex" >
+            <div className="  text-white text-2xl opacity-70 hover:bg-white hover:opacity-90 justify-around w-full h-20 bg-gradient-to-b from-orange-500 to-gray-400  hidden sm:flex" >
                 <a href="" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14">Home</a>
                 <a href="#service" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14" >Servicios</a>
                 <a href="#salon" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14">Nuestro Salon</a>

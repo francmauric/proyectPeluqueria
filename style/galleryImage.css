@@ -116,7 +116,7 @@
 
 .modal{
     align-self: center;
-    
+    z-index: 50;
     width: auto;
     padding-top: 20px;
     display: flex;

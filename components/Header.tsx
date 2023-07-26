@@ -18,9 +18,11 @@ export default function Example() {
 
   return (
     <div>
-      <div className="relative z-50 isolate overflow-hidden bg-[#5D4037] pb-24 sm:pb-32">
-        <NavBarmobile />
+      <div className="z-30">
         <NavBar />
+      </div>
+      <div className="relative z-20 isolate overflow-hidden bg-[#5D4037] pb-24 sm:pb-32">
+        <NavBarmobile />
         <img
           src="/images/salon-7.jpg"
           alt=""

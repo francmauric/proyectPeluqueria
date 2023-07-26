@@ -18,7 +18,7 @@ export default function NavBar () {
                     aria-hidden="true"
                 />
             </Disclosure.Button>
-            <div className="p-6 w-1/2 h-screen bg-white z-100 bg-opacity-90 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200 sm:hidden">
+            <div className="p-6 w-1/2 h-screen bg-gradient-to-b from-orange-500 to-gray-400 z-100 bg-opacity-90 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200 sm:hidden">
               <div className="flex flex-col rounded justify-start item-center ">
                 <div className="flex rounded-b-3xl items-center justify-center bg-gray-500 bg-opacity-80 p-5 h-48 pb-10">
                     <img className="rounded-full h-32 w-32" src="images/hair-salon.jpg" alt="hair" />

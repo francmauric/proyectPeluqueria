@@ -73,37 +73,37 @@ export default function Example() {
           <div className="section-dividerHeader00">
             <div className="section-dividerHeader0">
               <div className="section-dividerHeader">
-                <div className="w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white">
+                <div className="icono-redondo w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white transition-transform transform-growth">
                   <img
-                    className="w-16 h-16  "
+                    className="w-16 h-16 icono-redondo  "
                     src="/images/barber-1.png"
                     alt="barber"
                   />
                 </div>
-                <div className="w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white ">
+                <div className="icono-redondo w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white transition-transform transform-growth ">
                   <img
-                    className="w-16 h-16  "
+                    className="w-16 h-16 icono-redondo"
                     src="/images/barber-2.png"
                     alt="barber"
                   />
                 </div>
-                <div className="w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white ">
+                <div className="icono-redondo w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white transition-transform transform-growth">
                   <img
-                    className="w-16 h-16  "
+                    className="w-16 h-16 icono-redondo "
                     src="/images/barber-3.png"
                     alt="barber"
                   />
                 </div>
-                <div className="w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white ">
+                <div className="icono-redondo w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white transition-transform transform-growth">
                   <img
-                    className="w-16 h-16  "
+                    className="w-16 h-16  icono-redondo"
                     src="/images/barber-4.png"
                     alt="barber"
                   />
                 </div>
-                <div className="w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white">
+                <div className="icono-redondo w-16 h-16 rounded-full bg-white m-2 opacity-50 hover:opacity-100 hover:shadow-lg hover:shadow-white transition-transform transform-growth">
                   <img
-                    className="w-16 h-16  "
+                    className="w-16 h-16 icono-redondo "
                     src="/images/barber-5.png"
                     alt="barber"
                   />

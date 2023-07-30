@@ -162,7 +162,7 @@ export default function NavBar () {
          <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center flex-col">
                <div className="flex justify-center">
-                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+                <img className="rounded-full p-4 flex self-center w-[50%]" src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
@@ -204,14 +204,15 @@ export default function NavBar () {
 
             </Modal>
             <Modal className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
-            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center ">
-               <div className="flex ">
-                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+            <div className=" bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center flex-col">
+               <div className="flex justify-center">
+                <img className="rounded-full p-4 flex self-center w-[30%]" src="./images/logo-HYW.png" alt="" />
                </div>
-               <div className="bg-gradient-to-b from-orange-500 to-gray-400 w-[100%]">
-                            <h2 className="text-2xl">Seleccionar Horario</h2>
+               <div className=" bg-gradient-to-b from-orange-500 to-gray-400 w-[100%] ">
+                            <h2 className="text-2xl text-center">Seleccionar Horario</h2>
+                            <div className="flex flex-wrap justify-center">
                             {horario.map((time) => (
-                                <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded">
+                                <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-2 font-bold py-1 px-2 rounded">
                                 <input type="checkbox" 
                                     value={time}
                                     onChange={() => handleSelectTime(time)}
@@ -221,17 +222,15 @@ export default function NavBar () {
                                 {time}
                                 </label>
                             ))}
+                            </div>
                             <button onClick={closeNextModal} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold">Cerrar</button>
-                            
-               
-                
                 </div>
             </div> 
             </Modal>
             <Modal className="modal" isOpen={isNextModalOpen3} onRequestClose={closeNextModal3}>
-            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
-               <div className="flex ">
-                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center flex-col">
+               <div className="flex justify-center">
+                <img className="rounded-full p-4 flex self-center w-[50%]" src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
                 <form action="" className="flex flex-col">

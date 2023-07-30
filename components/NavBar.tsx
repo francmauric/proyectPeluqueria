@@ -132,7 +132,7 @@ export default function NavBar () {
             </div>
             <div className="containerModal">
                 
-            <Modal id="turnos" className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
+            <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />

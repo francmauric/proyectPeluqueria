@@ -146,7 +146,7 @@ export default function NavBar () {
                      <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center ">Home</h2>
                      <a href="#service" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center" >Servicios</a>
                      <a href="#salon" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Nuestro Salon</a>
-                     <button className="bg-indigo-500 h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded text-center "><a href="" onClick={handleOpenModal} className="">Turnos Online</a></button>
+                     <button className="bg-indigo-500 h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded text-center "><h2 onClick={handleOpenModal} className="">Turnos Online</h2></button>
                  </div>
 
                 
@@ -160,17 +160,17 @@ export default function NavBar () {
             </div>     
          </Disclosure>
          <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
-            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
-               <div className="flex ">
+            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center flex-col">
+               <div className="flex justify-center">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
-                    <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 w-80"/>
-                    <input type="text" placeholder="apellido" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 "/>
+                    <input type="text" placeholder="apellido" className="rounded-lg py-1 m-2 "/>
                     <label htmlFor="categoria" >Categoria</label>
-                    <select name="" className="rounded-lg py-1 m-2 w-80" id="categoria" value={category} onChange={handleCategoryChange} > 
+                    <select name="" className="rounded-lg py-1 m-2 " id="categoria" value={category} onChange={handleCategoryChange} > 
                         <option value="" selected>Selecciona categoria</option>
                         <option value="mechas">Mechas</option>
                         <option value="hombres">Hombres</option>
@@ -204,7 +204,7 @@ export default function NavBar () {
 
             </Modal>
             <Modal className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
-            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
+            <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center ">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>

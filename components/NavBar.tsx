@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import React, {useState} from "react";
+import SendEmail from "./SendEmail";
 
 
 export default function NavBar () {
@@ -121,6 +122,28 @@ export default function NavBar () {
     } */
 
 
+    const handleSubmitForm = () => {
+        // Aquí puedes implementar la lógica para enviar el formulario
+        // Puedes usar la información guardada en los estados del componente
+        // para enviarla a través de las props a SendEmail
+        // Por ejemplo:
+    
+        const formData = {
+          nombre: nombre,
+          apellido: apellido,
+          categoria: category,
+          servicio: service,
+          fecha: selectedDate,
+          horario: selectedTime,
+          telefono: phoneNumber,
+          email: emailAddress,
+          nota: note,
+        };
+    
+        // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
+        // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
+      };
+
     return(
         <>
             <div className="  text-white text-2xl opacity-70 hover:bg-white hover:opacity-90 justify-around w-full h-20 bg-gradient-to-b from-orange-500 to-gray-400  hidden sm:flex" >
@@ -222,6 +245,20 @@ export default function NavBar () {
             </div>
 
             </Modal>
+            {isNextModalOpen3 && (
+                <SendEmail 
+                    nombre={nombre}
+                    apellido={apellido}
+                    categoria={category}
+                    servicio={service}
+                    fecha={selectedDate}
+                    horario={selectedTime}
+                    telefono={phoneNumber}
+                    email={emailAddress}
+                    nota={note}
+                />
+
+            )}
             
             
             </div>

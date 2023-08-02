@@ -139,7 +139,8 @@ export default function NavBar () {
           email: emailAddress,
           nota: note,
         };
-    
+        
+        console.log(formData)
         // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
         // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
       };
@@ -237,6 +238,7 @@ export default function NavBar () {
                     <input type="text" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Nota</label>
                     <input type="text" className="rounded-lg py-1 m-2 w-80" />
+                    <input onClick={handleSubmitForm} type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
                 </form>
                          
                <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            
@@ -245,21 +247,7 @@ export default function NavBar () {
             </div>
 
             </Modal>
-            {isNextModalOpen3 && (
-                <SendEmail 
-                    nombre={nombre}
-                    apellido={apellido}
-                    categoria={category}
-                    servicio={service}
-                    fecha={selectedDate}
-                    horario={selectedTime}
-                    telefono={phoneNumber}
-                    email={emailAddress}
-                    nota={note}
-                />
-
-            )}
-            
+           
             
             </div>
         </>

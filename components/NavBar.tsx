@@ -15,7 +15,8 @@ export default function NavBar () {
     /* tercera ventana */
     const [isNextModalOpen3, setIsNextModalOpen3] = useState(false)
 
-
+    /* form */
+    const [nombre, setNombre] = useState("")
 
     const handleDateChange = (e) => {
         setSelectedDate(e.target.value)
@@ -140,7 +141,7 @@ export default function NavBar () {
           nota: note,
         };
         
-        console.log(formData)
+        console.log(nombre)
         // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
         // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
       };
@@ -164,7 +165,7 @@ export default function NavBar () {
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
-                    <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="text" placeholder="nombre" value={nombre} onChange={({ target }) => setNombre(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <input type="text" placeholder="apellido" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="categoria" >Categoria</label>
                     <select name="" className="rounded-lg py-1 m-2 w-80" id="categoria" value={category} onChange={handleCategoryChange} > 
@@ -231,14 +232,14 @@ export default function NavBar () {
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
-                <form action="" className="flex flex-col">
+                <form action="" onClick={handleSubmitForm} className="flex flex-col">
                     <label htmlFor="" className="text-lg">Numero de telefono</label>
                     <input type="number" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Email</label>
                     <input type="text" className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Nota</label>
                     <input type="text" className="rounded-lg py-1 m-2 w-80" />
-                    <input onClick={handleSubmitForm} type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
+                    <input  type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
                 </form>
                          
                <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            

@@ -1,8 +1,8 @@
-/* import React from "react";
-const nodemailer = require("nodemailer");
+import React from "react";
+/* const nodemailer = require("nodemailer"); */
 
 
-export default function SendEmail (props) {
+export default function SendEmail () {
 
 
 
@@ -11,10 +11,10 @@ export default function SendEmail (props) {
             <h1>sendemail</h1>
         </div>
     )
-} */
+}
 
 
-import React from 'react';
+/* import React from 'react';
 const nodemailer = require("nodemailer");
 
 interface SendEmailProps {
@@ -36,10 +36,11 @@ const SendEmail: React.FC<SendEmailProps> = (props) => {
 
   return (
     <div>
-      {/* Aquí puedes mostrar un mensaje de éxito o cualquier contenido relacionado con el envío del correo */}
+      
       <p>¡El formulario ha sido enviado con éxito!</p>
     </div>
   );
 };
 
 export default SendEmail;
+ */

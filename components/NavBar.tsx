@@ -18,10 +18,15 @@ export default function NavBar () {
     /* form */
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
+    const [numberPhone, setNumberPhone] = useState("")
+    const [email, setEmail] = useState("")
+    const [note, setNote] = useState("")
 
-
-    console.log("name", nombre)
+    /* console.log("name", nombre)
     console.log("apellido", apellido)
+    console.log("phone", numberPhone)
+    console.log("email", email)
+    console.log("note", note) */
 
     /* handle del calendario */
     const handleDateChange = (e) => {
@@ -136,12 +141,13 @@ export default function NavBar () {
           servicio: service,
           fecha: selectedDate,
           horario: selectedTime,
-          telefono: phoneNumber,
-          email: emailAddress,
+          telefono: numberPhone,
+          email: email,
           nota: note,
         };
-        console.log(nombre)
-        console.log(formData.nombre)
+
+        
+        console.log(formData)
         // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
         // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
       };
@@ -234,11 +240,11 @@ export default function NavBar () {
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
                 <form action="" onClick={handleSubmitForm} className="flex flex-col">
                     <label htmlFor="" className="text-lg">Numero de telefono</label>
-                    <input type="number" className="rounded-lg py-1 m-2 w-80"/>
-                    <label htmlFor="" className="text-lg">Email</label>
-                    <input type="text" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="number" value={numberPhone} onChange={({ target }) => setNumberPhone(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
+                    <label htmlFor="" className="text-lg" >Email</label>
+                    <input type="email" value={email} onChange={({ target }) => setEmail(target?.value)} className="rounded-lg py-1 m-2 w-80" placeholder="correo@gmail.com"/>
                     <label htmlFor="" className="text-lg">Nota</label>
-                    <input type="text" className="rounded-lg py-1 m-2 w-80" />
+                    <input type="text" value={note} onChange={({ target }) => setNote(target?.value)} className="rounded-lg py-1 m-2 w-80" />
                     <input  type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
                 </form>
                          
@@ -248,6 +254,7 @@ export default function NavBar () {
             </div>
 
             </Modal>
+            <SendEmail formData = {formData} />
            
             
             </div>

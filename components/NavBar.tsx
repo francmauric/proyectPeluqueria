@@ -17,12 +17,20 @@ export default function NavBar () {
 
     /* form */
     const [nombre, setNombre] = useState("")
+    const [apellido, setApellido] = useState("")
 
+
+    console.log("name", nombre)
+    console.log("apellido", apellido)
+
+    /* handle del calendario */
     const handleDateChange = (e) => {
         setSelectedDate(e.target.value)
         
     }
-    console.log(selectedDate)
+    /* console.log(selectedDate) */
+
+    /* select de la categoria */
     const handleCategoryChange = (e) => {
         const selectedCategory = e.target.value;
         setCategory(selectedCategory)
@@ -48,7 +56,7 @@ export default function NavBar () {
         setService("");
     }
         
-
+    /* select de los servicios */
     const handleServiceChange = (e) => {
         setService(e.target.value);
     }
@@ -101,6 +109,7 @@ export default function NavBar () {
     const closeNextModal3 = () =>{
         setIsNextModalOpen3(false)
     }
+
     /* const handlePrevius = () =>{
         setIsNe
     } */
@@ -111,16 +120,7 @@ export default function NavBar () {
     const handleSelectTime = (time: React.SetStateAction<string>) => {
         setSelectedTime(time)
     }
-    /* confirmar */
-    /* const handleConfirm = () => {
-        is (selectedTime) {
-            console.log("horario seleccionado: ${selectedTime}")
-
-            closeNextModal();
-        }else {
-            alert("por favor, selecciona un horario")
-        }
-    } */
+   
 
 
     const handleSubmitForm = () => {
@@ -140,8 +140,8 @@ export default function NavBar () {
           email: emailAddress,
           nota: note,
         };
-        
         console.log(nombre)
+        console.log(formData.nombre)
         // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
         // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
       };
@@ -166,7 +166,7 @@ export default function NavBar () {
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
                     <input type="text" placeholder="nombre" value={nombre} onChange={({ target }) => setNombre(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
-                    <input type="text" placeholder="apellido" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="text" placeholder="apellido" value={apellido} onChange={({ target }) => setApellido(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="categoria" >Categoria</label>
                     <select name="" className="rounded-lg py-1 m-2 w-80" id="categoria" value={category} onChange={handleCategoryChange} > 
                         <option value="" selected>Selecciona categoria</option>

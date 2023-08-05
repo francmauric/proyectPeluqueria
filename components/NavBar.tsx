@@ -22,6 +22,18 @@ export default function NavBar () {
     const [email, setEmail] = useState("")
     const [note, setNote] = useState("")
 
+    const [formData, setFormData] = useState({
+        nombre: "",
+        apellido:"",
+        categoria: "",
+        servicio: "",
+        fecha: "",
+        horario: "",
+        telefono: "",
+        email: "",
+        nota: "",
+    })
+
     /* console.log("name", nombre)
     console.log("apellido", apellido)
     console.log("phone", numberPhone)
@@ -134,7 +146,7 @@ export default function NavBar () {
         // para enviarla a través de las props a SendEmail
         // Por ejemplo:
     
-        const formData = {
+        const data = {
           nombre: nombre,
           apellido: apellido,
           categoria: category,
@@ -147,7 +159,9 @@ export default function NavBar () {
         };
 
         
-        console.log(formData)
+        
+
+        setFormData(data)
         // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
         // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
       };
@@ -170,7 +184,7 @@ export default function NavBar () {
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
-                <form action="" className="flex flex-col">
+                <form action=""  className="flex flex-col">
                     <input type="text" placeholder="nombre" value={nombre} onChange={({ target }) => setNombre(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <input type="text" placeholder="apellido" value={apellido} onChange={({ target }) => setApellido(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="categoria" >Categoria</label>
@@ -254,7 +268,7 @@ export default function NavBar () {
             </div>
 
             </Modal>
-            <SendEmail formData = {formData} />
+            <SendEmail formData={formData} />
            
             
             </div>

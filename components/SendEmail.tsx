@@ -64,7 +64,7 @@ interface SendEmailProps {
 const SendEmail: React.FC<SendEmailProps> = ({ formData }) => {
   // Aquí puedes utilizar los datos de formData para implementar la lógica de envío de correos electrónicos u otras acciones relacionadas con los datos del formulario.
   // Por ejemplo:
-  console.log(formData);
+  /* console.log(formData); */
 
   // Lógica para enviar el correo electrónico
   // ...

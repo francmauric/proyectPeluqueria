@@ -2,6 +2,8 @@ import Modal from "react-modal";
 import React, {useState} from "react";
 import SendEmail from "./SendEmail";
 
+import axios from 'axios';
+
 
 export default function NavBar () {
     const [isOpen, setIsOpen] = useState(false)
@@ -141,6 +143,7 @@ export default function NavBar () {
 
 
     const handleSubmitForm = () => {
+        
         // Aquí puedes implementar la lógica para enviar el formulario
         // Puedes usar la información guardada en los estados del componente
         // para enviarla a través de las props a SendEmail
@@ -158,7 +161,17 @@ export default function NavBar () {
           nota: note,
         };
 
-        
+        /* try {
+            const { data } = axios({
+                url: "",
+                method: "POST",
+                data: data1
+            }); 
+            console.log("response back:", data)
+        } catch (error) {
+            console.log("error:", error)
+        }
+         */
         
 
         setFormData(data)

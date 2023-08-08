@@ -6,9 +6,9 @@ if (req.method === "POST") {
 
     const data = req?.body;
     
-    /* log("req payload:", data) */
+    log("req payload:", data)
     
-    res.json({ data });
+    res.json({data} );
 
 }
 

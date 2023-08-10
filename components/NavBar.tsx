@@ -281,7 +281,7 @@ export default function NavBar () {
             </div>
 
             </Modal>
-            <SendEmail formData={formData} />
+            
            
             
             </div>

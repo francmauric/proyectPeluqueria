@@ -2,6 +2,7 @@ import Modal from "react-modal";
 import React, {useState} from "react";
 import SendEmail from "./SendEmail";
 
+
 import axios from 'axios';
 
 
@@ -23,6 +24,8 @@ export default function NavBar () {
     const [numberPhone, setNumberPhone] = useState("")
     const [email, setEmail] = useState("")
     const [note, setNote] = useState("")
+
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
 
     const [formData, setFormData] = useState({
         nombre: "",

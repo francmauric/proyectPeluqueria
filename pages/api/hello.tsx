@@ -18,6 +18,7 @@ if (req.method === "POST") {
                 pass: process.env.EMAIL_PASS,
             },
         });
+        console.log(transporter.auth.user)
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
@@ -31,6 +32,7 @@ if (req.method === "POST") {
 
         res.status(200).json({ message: "Correo enviado con éxito"})
     }catch (error) {
+        
         console.error("Error al enviar el correo: ", error);
         res.status(500).json({ error: "Ocurrio un error al enviar el correo"});
     }

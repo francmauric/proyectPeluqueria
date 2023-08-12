@@ -4,6 +4,8 @@ import Carrousel from "./Carrousel";
 import Validaciones2 from "./Validaciones2";
 import Direccion from "./Direccion";
 
+
+
 export default function Main() {
   const slides = [
     "../images/salon-1.jpg",
@@ -117,6 +119,10 @@ export default function Main() {
       </div>
       <div>
         <Direccion />
+      </div>
+      <div>
+
+      
       </div>
     </div>
   );

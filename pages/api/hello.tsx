@@ -2,7 +2,7 @@ const { log } = console;
 import nodemailer from "nodemailer";
 
 
-export default async function Hello (req, res) {
+export default async function Hello (req, res, props) {
 
 if (req.method === "POST") {
 
@@ -18,7 +18,7 @@ if (req.method === "POST") {
                 pass: process.env.EMAIL_PASS,
             },
         });
-        console.log(transporter.auth.user)
+        
 
         const mailOptions = {
             from: process.env.EMAIL_USER,

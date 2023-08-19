@@ -6,7 +6,7 @@ import SendEmail from "./SendEmail";
 import axios from 'axios';
 
 
-export default function NavBar (props) {
+export default function NavBar ({emailUser}) {
     const [isOpen, setIsOpen] = useState(false)
     const [category, setCategory] = useState("")
     const [service, setService] = useState("")
@@ -27,7 +27,7 @@ export default function NavBar (props) {
 
     console.log("EMAIL_USER-navbar:", process.env.EMAIL_USER);
 
-    console.log("navbar-var",props.emailUser)    
+    console.log("navbar-var",emailUser)    
 
     const [formData, setFormData] = useState({
         nombre: "",

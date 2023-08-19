@@ -8,7 +8,7 @@ import Footer from '@/components/Footer'
 
  
 
-  console.log("EMAIL_USER-index:", process.env.EMAIL_USER);
+  console.log("EMAIL_USER-index:", process.env.NEXT_PUBLIC_URL_CLIENT);
     return (
       <>
       

@@ -2,7 +2,8 @@ const { log } = console;
 import nodemailer from "nodemailer";
 
 
-export default async function Hello (req, res, props) {
+export default async function Hello (req, res) {
+    console.log("EMAIL_USER-hello:", process.env.NEXT_PUBLIC_URL_CLIENT);
 
 if (req.method === "POST") {
 

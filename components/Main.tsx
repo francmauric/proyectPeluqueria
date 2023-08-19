@@ -109,7 +109,7 @@ export default function Main() {
       <div id="salon" className=" flex flex-col items-center">
         <div>
           <Carrousel autoslide={true}>
-            {[...slides.map((s) => <img src={s} />), ""]}
+            {[...slides.map((s,i) => <img key={i} src={s} />), ""]}
           </Carrousel>
         </div>
       </div>

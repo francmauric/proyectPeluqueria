@@ -42,12 +42,4 @@ if (req.method === "POST") {
 } 
 
 
-
-/*     res.json({data} );
-
-return res.status(500).json({
-    msg: "this needs to be a post request"
-})
-
- */
 }

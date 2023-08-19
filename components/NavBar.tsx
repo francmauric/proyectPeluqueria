@@ -6,7 +6,8 @@ import SendEmail from "./SendEmail";
 import axios from 'axios';
 
 
-export default function NavBar ({emailUser}) {
+
+export default function NavBar () {
     const [isOpen, setIsOpen] = useState(false)
     const [category, setCategory] = useState("")
     const [service, setService] = useState("")
@@ -25,9 +26,7 @@ export default function NavBar ({emailUser}) {
     const [email, setEmail] = useState("")
     const [note, setNote] = useState("")
 
-    console.log("EMAIL_USER-navbar:", process.env.EMAIL_USER);
-
-    console.log("navbar-var",emailUser)    
+    
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -40,6 +39,8 @@ export default function NavBar ({emailUser}) {
         email: "",
         nota: "",
     })
+
+
 
     /* console.log("name", nombre)
     console.log("apellido", apellido)
@@ -195,7 +196,7 @@ export default function NavBar ({emailUser}) {
             </div>
             <div className="containerModal">
                 
-            <Modal className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
+            <Modal id="Vista1" className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
@@ -207,7 +208,7 @@ export default function NavBar ({emailUser}) {
                     <input type="text" placeholder="apellido" value={apellido} onChange={({ target }) => setApellido(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="categoria" >Categoria</label>
                     <select name="" className="rounded-lg py-1 m-2 w-80" id="categoria" value={category} onChange={handleCategoryChange} > 
-                        <option value="" selected>Selecciona categoria</option>
+                        <option value="" >Selecciona categoria</option>
                         <option value="mechas">Mechas</option>
                         <option value="hombres">Hombres</option>
                         <option value="color">Color</option>
@@ -217,8 +218,8 @@ export default function NavBar ({emailUser}) {
                         <option value="tratamientos">Tratamientos</option>
                     </select>
                     <label htmlFor="">Servicios</label>
-                    <select name="" id="service" className="rounded-lg py-1 m-2 w-80" value={service} onChange={handleServiceChange} disabled={!category}>
-                        <option value="" selected>Seleccion Servicio</option>
+                    <select name="" id="service" className="rounded-lg py-1 m-2 w-80"  defaultValue={service} onChange={handleServiceChange} disabled={!category}>
+                        <option value="" >Seleccion Servicio</option>
                         {serviceOptions.map((option) => (
                             <option key={option} value={option}>
                                 {option}
@@ -239,7 +240,7 @@ export default function NavBar ({emailUser}) {
             </div>  
 
             </Modal>
-            <Modal className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
+            <Modal id="Vista2" className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
@@ -264,7 +265,7 @@ export default function NavBar ({emailUser}) {
                 </div>
             </div> 
             </Modal>
-            <Modal className="modal" isOpen={isNextModalOpen3} onRequestClose={closeNextModal3}>
+            <Modal id="Vista3" className="modal" isOpen={isNextModalOpen3} onRequestClose={closeNextModal3}>
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />

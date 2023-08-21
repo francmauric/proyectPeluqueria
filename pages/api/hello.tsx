@@ -12,6 +12,7 @@ if (req.method === "POST") {
     log("req payload:", data)
 
     try{
+        console.log("try")
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {

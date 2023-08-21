@@ -24,7 +24,7 @@ if (req.method === "POST") {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: ["francocuello10@gmail.com"],
+            to: data.email,
             subject: "Nuevo formulario enviado",
             text: JSON.stringify(data, null, 2),
 

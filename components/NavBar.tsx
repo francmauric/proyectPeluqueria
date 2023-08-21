@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import React, {useState} from "react";
-import SendEmail from "./SendEmail";
+
 
 
 import axios from 'axios';
@@ -271,14 +271,14 @@ export default function NavBar () {
                 <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
-                <form action="" onClick={handleSubmitForm} className="flex flex-col">
+                <form action="" className="flex flex-col">
                     <label htmlFor="" className="text-lg">Numero de telefono</label>
                     <input type="number" value={numberPhone} onChange={({ target }) => setNumberPhone(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg" >Email</label>
                     <input type="email" value={email} onChange={({ target }) => setEmail(target?.value)} className="rounded-lg py-1 m-2 w-80" placeholder="correo@gmail.com"/>
                     <label htmlFor="" className="text-lg">Nota</label>
                     <input type="text" value={note} onChange={({ target }) => setNote(target?.value)} className="rounded-lg py-1 m-2 w-80" />
-                    <input  type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
+                    <input  onClick={handleSubmitForm}  type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
                 </form>
                          
                <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            

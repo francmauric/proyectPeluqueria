@@ -3,6 +3,8 @@ import { Disclosure } from "@headlessui/react"
 import { GiHamburgerMenu } from "react-icons/gi"
 import Modal from "react-modal";
 
+import axios from 'axios';
+
 export default function NavBar () {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -16,6 +18,26 @@ export default function NavBar () {
     /* tercera ventana */
     const [isNextModalOpen3, setIsNextModalOpen3] = useState(false)
 
+        /* form */
+    const [nombre, setNombre] = useState("")
+    const [apellido, setApellido] = useState("")
+    const [numberPhone, setNumberPhone] = useState("")
+    const [email, setEmail] = useState("")
+    const [note, setNote] = useState("")
+
+    
+
+    const [formData, setFormData] = useState({
+        nombre: "",
+        apellido:"",
+        categoria: "",
+        servicio: "",
+        fecha: "",
+        horario: "",
+        telefono: "",
+        email: "",
+        nota: "",
+    })
 
 
     const handleDateChange = (e) => {
@@ -203,11 +225,11 @@ export default function NavBar () {
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
                 <form action="" className="flex flex-col">
-                    <input type="text" placeholder="nombre" className="rounded-lg py-1 m-2 "/>
-                    <input type="text" placeholder="apellido" className="rounded-lg py-1 m-2 "/>
+                    <input type="text" placeholder="nombre" value={nombre} onChange={({ target }) => setNombre(target?.value)} className="rounded-lg py-1 m-2 "/>
+                    <input type="text" placeholder="apellido" value={apellido} onChange={({ target }) => setApellido(target?.value)} className="rounded-lg py-1 m-2 "/>
                     <label htmlFor="categoria" >Categoria</label>
                     <select name="" className="rounded-lg py-1 m-2 " id="categoria" value={category} onChange={handleCategoryChange} > 
-                        <option value="" selected>Selecciona categoria</option>
+                        <option value="" >Selecciona categoria</option>
                         <option value="mechas">Mechas</option>
                         <option value="hombres">Hombres</option>
                         <option value="color">Color</option>
@@ -217,8 +239,8 @@ export default function NavBar () {
                         <option value="tratamientos">Tratamientos</option>
                     </select>
                     <label htmlFor="">Servicios</label>
-                    <select name="" id="service" className="rounded-lg py-1 m-2 w-80" value={service} onChange={handleServiceChange} disabled={!category}>
-                        <option value="" selected>Seleccion Servicio</option>
+                    <select name="" id="service" className="rounded-lg py-1 m-2 w-80" defaultValue={service} onChange={handleServiceChange} disabled={!category}>
+                        <option value="" >Seleccion Servicio</option>
                         {serviceOptions.map((option) => (
                             <option key={option} value={option}>
                                 {option}
@@ -271,11 +293,12 @@ export default function NavBar () {
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
                 <form action="" className="flex flex-col">
                     <label htmlFor="" className="text-lg">Numero de telefono</label>
-                    <input type="number" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="number" value={numberPhone} onChange={({ target }) => setNumberPhone(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Email</label>
-                    <input type="text" className="rounded-lg py-1 m-2 w-80"/>
+                    <input type="email" value={email} onChange={({ target }) => setEmail(target?.value)} className="rounded-lg py-1 m-2 w-80"/>
                     <label htmlFor="" className="text-lg">Nota</label>
-                    <input type="text" className="rounded-lg py-1 m-2 w-80" />
+                    <input type="text" value={note} onChange={({ target }) => setNote(target?.value)} className="rounded-lg py-1 m-2 w-80" />
+                    <input  onClick={handleSubmitForm}  type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
                 </form>
                          
                <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            

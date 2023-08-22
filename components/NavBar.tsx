@@ -219,7 +219,7 @@ export default function NavBar () {
                     </select>
                     <label htmlFor="">Servicios</label>
                     <select name="" id="service" className="rounded-lg py-1 m-2 w-80"  defaultValue={service} onChange={handleServiceChange} disabled={!category}>
-                        <option value="" >Seleccion Servicio</option>
+                        <option value=""  >Seleccion Servicio</option>
                         {serviceOptions.map((option) => (
                             <option key={option} value={option}>
                                 {option}

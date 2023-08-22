@@ -122,6 +122,42 @@ export default function NavBar () {
         }
     } */
 
+    const handleSubmitForm = async () => {
+        
+        // Aquí puedes implementar la lógica para enviar el formulario
+        // Puedes usar la información guardada en los estados del componente
+        // para enviarla a través de las props a SendEmail
+        // Por ejemplo:
+    
+        const data1 = {
+          nombre: nombre,
+          apellido: apellido,
+          categoria: category,
+          servicio: service,
+          fecha: selectedDate,
+          horario: selectedTime,
+          telefono: numberPhone,
+          email: email,
+          nota: note,
+        };
+
+        try {
+            const { data } = await axios({
+                url: "/api/hello",
+                method: "POST",
+                data: data1
+            }); 
+            console.log("response back:", data)
+        } catch (error) {
+            console.log("error:", error)
+        }
+        
+        
+
+        setFormData(data1)
+        // Llamar a tu función o servicio de envío de correo pasando formData como parámetro.
+        // Aquí puedes usar una API, una función de servidor o cualquier otro método para enviar el correo.
+      };
 
 
 

@@ -21,16 +21,24 @@ if (req.method === "POST") {
             },
         });
         
-
-        const mailOptions = {
+        const ownerMailOptions = {
             from: process.env.EMAIL_USER,
-            to: data.email,
+            to: process.env.EMAIL_USER,
             subject: "Nuevo formulario enviado",
             text: JSON.stringify(data, null, 2),
 
         };
 
-        await transporter.sendMail(mailOptions)
+        const clientMailOptions = {
+            from: process.env.EMAIL_USER,
+            to: data.email,
+            subject: "Nuevo formulario enviado",
+            text: "Gracias por contactarnos. para poder confirmar su turno necesitamos que por favor mande un mensaje de confirmacion a este numero: 546323255 ... muchas gracias",
+
+        };
+
+        await transporter.sendMail(clientMailOptions)
+        await transporter.sendMail(ownerMailOptions)
 
         res.status(200).json({ message: "Correo enviado con éxito"})
     }catch (error) {

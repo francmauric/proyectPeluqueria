@@ -1,10 +1,19 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
+type Card = {
+  name: string;
+  value: string;
+};
+
 export default function Validaciones2({
   card,
   autoslide = false,
   autoslideInterval = 3000,
+}: {
+  card: Card[]; // Aquí especificamos el tipo del array card
+  autoslide?: boolean;
+  autoslideInterval?: number;
 }) {
   const [curr, setCurr] = useState(0);
 
@@ -26,7 +35,7 @@ export default function Validaciones2({
 
       <div className="flex justify-center items-center">
         <div className="relative w-96 h-72">
-          {card.map((card, index) => (
+          {card.map((auto: Card, index: number) => (
             <div
               key={index}
               className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
@@ -34,8 +43,8 @@ export default function Validaciones2({
               }`}
             >
               <div className="bg-white p-4 rounded-lg shadow">
-                <h2 className="text-xl font-semibold mb-2">{card.name}</h2>
-                <p>{card.value}</p>
+                <h2 className="text-xl font-semibold mb-2">{auto.name}</h2>
+                <p>{auto.value}</p>
               </div>
             </div>
           ))}

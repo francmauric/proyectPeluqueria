@@ -1,8 +1,9 @@
 const { log } = console;
 import nodemailer from "nodemailer";
+import { NextApiRequest, NextApiResponse } from "next";
 
 
-export default async function Hello (req, res) {
+export default async function Hello (req: NextApiRequest, res: NextApiResponse) {
     console.log("EMAIL_USER-hello:", process.env.NEXT_PUBLIC_URL_CLIENT);
 
 if (req.method === "POST") {

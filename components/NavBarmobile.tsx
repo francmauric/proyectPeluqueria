@@ -8,9 +8,9 @@ import axios from 'axios';
 export default function NavBar () {
 
     const [isOpen, setIsOpen] = useState(false)
-    const [category, setCategory] = useState("")
-    const [service, setService] = useState("")
-    const [serviceOptions, setServiceOptions] = useState([])
+    const [category, setCategory] = useState<string>("")
+    const [service, setService] = useState<string>("")
+    const [serviceOptions, setServiceOptions] = useState<string[]>([])
     const [selectedDate, setSelectedDate] = useState("")
     /* segunda ventana */
     const [isNextModalOpen, setIsNextModalOpen] = useState(false)
@@ -40,13 +40,13 @@ export default function NavBar () {
     })
 
 
-    const handleDateChange = (e) => {
+    const handleDateChange = (e:any) => {
         setSelectedDate(e.target.value)
         
     }
     console.log(selectedDate)
-    const handleCategoryChange = (e) => {
-        const selectedCategory = e.target.value;
+    const handleCategoryChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
+        const selectedCategory: string = e.target.value;
         setCategory(selectedCategory)
         
         if(selectedCategory === "hombres") {
@@ -71,7 +71,7 @@ export default function NavBar () {
     }
         
 
-    const handleServiceChange = (e) => {
+    const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement> ) => {
         setService(e.target.value);
     }
 

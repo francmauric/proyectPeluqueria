@@ -199,7 +199,7 @@ export default function NavBar () {
             <Modal id="Vista1" ariaHideApp={true} className="modal" isOpen={isOpen} onRequestClose={handleCloseModal}>
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
-                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="hair" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 ">
                 <h2 className="text-2xl">Formulario de reserva</h2>
@@ -243,7 +243,7 @@ export default function NavBar () {
             <Modal id="Vista2" className="modal" isOpen={isNextModalOpen} onRequestClose={closeNextModal} >
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
-                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="hair" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 w-[100%]">
                             <h2 className="text-2xl">Seleccionar Horario</h2>
@@ -268,7 +268,7 @@ export default function NavBar () {
             <Modal id="Vista3" className="modal" isOpen={isNextModalOpen3} onRequestClose={closeNextModal3}>
             <div className="bg-gradient-to-b from-orange-500 to-gray-400 flex justify-center w-[60%]">
                <div className="flex ">
-                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="" />
+                <img className="rounded-full p-4 flex self-center " src="./images/logo-HYW.png" alt="hair" />
                </div>
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 h-80  ">
                 <form action="" className="flex flex-col">

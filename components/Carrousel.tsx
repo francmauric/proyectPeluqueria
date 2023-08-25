@@ -1,6 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
+
+
 
 export default function Carrousel({
   children: slides,
@@ -46,7 +48,7 @@ export default function Carrousel({
         </div>
         <div className="absolute bottom-4 right-0 left-0">
           <div className="flex items-center justify-center gap-2">
-            {slides.map((_, i) => (
+            {slides.map((_: any, i: number) => (
               <div key={i}
                 className={`transition-all w-3 h-3 bg-white rounded-full ${
                   curr === i ? "p-2" : "bg-opacity-50"
@@ -141,7 +143,7 @@ export default function Carrousel({
           </div>
           <div className="absolute bottom-4 right-0 left-0">
             <div className="flex items-center justify-center gap-2">
-              {slides.map((_, i) => (
+              {slides.map((_: string, i: number) => (
                 <div key={i}
                   className={`transition-all w-3 h-3 bg-white rounded-full ${
                     curr === i ? "p-2" : "bg-opacity-50"

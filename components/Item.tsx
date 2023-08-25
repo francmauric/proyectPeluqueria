@@ -1,11 +1,21 @@
 import React from "react";
 
-const Item = ({ Links, title }) => {
+type Link = {
+    link: string;
+    name: string;
+  };
+
+  
+  type ItemProps = {
+    Links: Link[];
+    title: string;
+  }  
+const Item = ({ Links, title }: ItemProps) => {
 
     return(
         <ul>
             <h1 className="mb-1 font-semibold">{title}</h1>
-            {Links.map((link, index) => (
+            {Links.map((link: Link, index: number) => (
                 <li key={index}>
                 <a className="text-gray-400 hover:text-orange-400 duration-300
                                 text-sm cursor-pointer leading-6"   

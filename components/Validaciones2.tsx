@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
 type Card = {
@@ -19,8 +19,13 @@ export default function Validaciones2({
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? card.length - 1 : curr - 1));
-  const next = () =>
-    setCurr((curr) => (curr === card.length - 1 ? 0 : curr + 1));
+  /* const next = () =>
+    setCurr((curr) => (curr === card.length - 1 ? 0 : curr + 1)); */
+  const next = useCallback(
+      () => setCurr((curr) => (curr === card.length - 1 ? 0 : curr + 1)),
+      [card]
+    );
+
 
   useEffect(() => {
     if (!autoslide) return;

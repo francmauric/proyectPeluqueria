@@ -34,7 +34,7 @@ if (req.method === "POST") {
             from: process.env.EMAIL_USER,
             to: data.email,
             subject: "Nuevo formulario enviado",
-            text: "Gracias por contactarnos. para poder confirmar su turno necesitamos que por favor mande un mensaje de confirmacion a este numero: 546323255 ... muchas gracias",
+            text: "Gracias por contactarnos. para poder confirmar su turno y evitar el spam necesitamos que por favor mande un mensaje de confirmacion a este numero: 546323255, Muchas gracias. Atte. How 'U want",
 
         };
 

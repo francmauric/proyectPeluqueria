@@ -49,7 +49,7 @@ export default function Example() {
         <div className="flex flex-col  mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight py-10 text-white sm:text-6xl">
-              Peluqueria <p>How 'U want</p>
+              Peluqueria <p>How &apos;U want</p>
             </h2>
           </div>
           <div className="mx-auto pt-36 mt-10 max-w-2xl h-48 lg:mx-0 lg:max-w-none">

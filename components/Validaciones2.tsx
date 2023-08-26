@@ -26,7 +26,7 @@ export default function Validaciones2({
     if (!autoslide) return;
     const slideInterval = setInterval(next, autoslideInterval);
     return () => clearInterval(slideInterval);
-  }, []);
+  }, [autoslide, autoslideInterval, next]);
   return (
     <div id="validaciones" className="bg-[#5D4037] flex flex-col ">
       <h1 className="text-center text-white text-3xl p-5">

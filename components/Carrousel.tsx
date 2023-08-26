@@ -8,6 +8,10 @@ export default function Carrousel({
   children: slides,
   autoslide = false,
   autoslideInterval = 3000,
+}: {
+  children: ReactNode[];
+  autoslide?: boolean;
+  autoslideInterval?: number;
 }) {
   const [curr, setCurr] = useState(0);
 
@@ -17,11 +21,14 @@ export default function Carrousel({
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
+    
+
+
   useEffect(() => {
     if (!autoslide) return;
     const slideInterval = setInterval(next, autoslideInterval);
     return () => clearInterval(slideInterval);
-  }, []);
+  }, [autoslide, autoslideInterval, next]);
 
   return (
     <div>
@@ -63,7 +70,7 @@ export default function Carrousel({
           <h1 className=" text-center text-3xl p-5">Nuestro Salon</h1>
           <div className="lg:p-4 sm: ">
             <p>
-              "En How You Want, nos enorgullece ofrecerte una experiencia de
+            &quot;En How You Want, nos enorgullece ofrecerte una experiencia de
               belleza excepcional en nuestro moderno y acogedor salón. Nuestro
               objetivo es brindarte un servicio personalizado y de alta calidad
               que resalte tu belleza única.
@@ -108,7 +115,7 @@ export default function Carrousel({
               {" "}
               Visítanos hoy mismo y déjanos consentirte con nuestros servicios
               excepcionales y nuestra atención dedicada. ¡Confía en nosotros
-              para realzar tu belleza y elevar tu confianza!"
+              para realzar tu belleza y elevar tu confianza!&quot;
             </p>
 
             <p>
@@ -143,7 +150,7 @@ export default function Carrousel({
           </div>
           <div className="absolute bottom-4 right-0 left-0">
             <div className="flex items-center justify-center gap-2">
-              {slides.map((_: string, i: number) => (
+              {slides.map((_, i: number) => (
                 <div key={i}
                   className={`transition-all w-3 h-3 bg-white rounded-full ${
                     curr === i ? "p-2" : "bg-opacity-50"

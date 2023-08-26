@@ -62,11 +62,11 @@ export default function Main() {
             La mejor peluqueria de Santa Croce Camerina
           </div>
           <p className="text-white text-lg p-10">
-            "¡Bienvenidos a HOW YOU WANT! Somos un equipo apasionado de
+          &quot;¡Bienvenidos a HOW YOU WANT! Somos un equipo apasionado de
             estilistas y especialistas en cuidado capilar dedicados a realzar tu
             belleza y brindarte una experiencia única. Nuestro objetivo es no
             solo transformar tu apariencia, sino también elevar tu confianza y
-            bienestar personal.
+            bienestar personal.&quot;
           </p>
         </div>
        

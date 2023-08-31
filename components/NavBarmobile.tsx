@@ -301,7 +301,7 @@ export default function NavBar () {
                     <input  onClick={handleSubmitForm}  type="submit" className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold"/>
                 </form>
                          
-               <button onClick={handleNext} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold" >Siguiente</button>            
+                          
                 <button onClick={closeNextModal3} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold">Cerrar</button>
                 </div>
             </div>

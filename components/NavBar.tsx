@@ -248,16 +248,22 @@ export default function NavBar () {
                <div className="bg-gradient-to-b from-orange-500 to-gray-400 w-[100%]">
                             <h2 className="text-2xl">Seleccionar Horario</h2>
                             {horario.map((time) => (
-                                <label key={time} className="inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded">
-                                <input type="checkbox" 
+                                <label key={time} className={`inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded ${
+                                    selectedTime === time ? 'bg-gray-800' : ''
+                                }`}>
+                                <input type="radio" 
                                     value={time}
                                     onChange={() => handleSelectTime(time)}
-                                    onClick={handleNext3}
-                                    className="form-checkbox hidden h-5 w-5 text-blue-600"
+                                    
+                                    checked={selectedTime === time}
+                                    className="form-radio hidden h-5 w-5 text-blue-600"
                                 />
                                 {time}
                                 </label>
                             ))}
+                            <button onClick={handleNext3} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold">
+    Siguiente
+</button>
                             <button onClick={closeNextModal} className="relative inline-block rounded overflow-hidden transition p-2 text-xl hover:text-orange-700 font-semibold">Cerrar</button>
                             
                

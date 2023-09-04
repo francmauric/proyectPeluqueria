@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 
 
@@ -28,7 +28,14 @@ export default function NavBar () {
 
     /* reserva de turno */
     const [reservedTimes, setReservedTimes] = useState<string[]>([]);
-    
+    console.log(reservedTimes)
+
+    useEffect(() => {
+        const storedReservedTimes = localStorage.getItem("reservedTimes");
+        if (storedReservedTimes) {
+            setReservedTimes(JSON.parse(storedReservedTimes));
+        }
+    },[])
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -126,7 +133,11 @@ export default function NavBar () {
                 alert("Este turno ya ha sido reservado, por favor selecciona otro horario")
             } else {
             console.log("horario seleccionado")
-            setReservedTimes([...reservedTimes, selectedTime]);
+            const updatedReservedTimes = [...reservedTimes, selectedTime]
+            setReservedTimes(updatedReservedTimes);
+
+            /* guardar en localstorage */
+            localStorage.setItem("reservedTimes", JSON.stringify(updatedReservedTimes))
             closeNextModal()
             openNextModal3()
             }

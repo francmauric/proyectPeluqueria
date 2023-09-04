@@ -6,5 +6,6 @@ import "../style/galleryImage.css"
 Modal.setAppElement('#__next')
 
 export default function App({ Component, pageProps }: AppProps) {
+  
   return <Component {...pageProps} />
 }

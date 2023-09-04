@@ -26,6 +26,8 @@ export default function NavBar () {
     const [email, setEmail] = useState("")
     const [note, setNote] = useState("")
 
+    /* reserva de turno */
+    const [reservedTimes, setReservedTimes] = useState<string[]>([]);
     
 
     const [formData, setFormData] = useState({
@@ -120,9 +122,14 @@ export default function NavBar () {
     /* ventana emergente modal 3 */
     const handleNext3 = () => {
         if(selectedTime) {
+            if (reservedTimes.includes(selectedTime)){
+                alert("Este turno ya ha sido reservado, por favor selecciona otro horario")
+            } else {
             console.log("horario seleccionado")
+            setReservedTimes([...reservedTimes, selectedTime]);
             closeNextModal()
             openNextModal3()
+            }
         }else{
             alert("por favor, selecciona un horario")
         }
@@ -249,13 +256,13 @@ export default function NavBar () {
                             <h2 className="text-2xl">Seleccionar Horario</h2>
                             {horario.map((time) => (
                                 <label key={time} className={`inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded ${
-                                    selectedTime === time ? 'bg-gray-800' : ''
+                                    reservedTimes.includes(time) ? 'bg-red-500 cursor-not-allowed' : selectedTime === time ? 'bg-gray-800' : ''
                                 }`}>
                                 <input type="radio" 
                                     value={time}
                                     onChange={() => handleSelectTime(time)}
-                                    
-                                    checked={selectedTime === time}
+                                    checked={selectedTime === time} 
+                                    disabled={reservedTimes.includes(time)}
                                     className="form-radio hidden h-5 w-5 text-blue-600"
                                 />
                                 {time}

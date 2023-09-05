@@ -27,7 +27,7 @@ export default function NavBar () {
     const [note, setNote] = useState("")
 
     /* reserva de turno */
-    const [reservedTimes, setReservedTimes] = useState<string[]>([]);
+    const [reservedTimes, setReservedTimes] = useState<{ date: string; times: string[] }[]>([]);
     console.log(reservedTimes)
 
     useEffect(() => {
@@ -128,18 +128,22 @@ export default function NavBar () {
 
     /* ventana emergente modal 3 */
     const handleNext3 = () => {
-        if(selectedTime) {
-            if (reservedTimes.includes(selectedTime)){
-                alert("Este turno ya ha sido reservado, por favor selecciona otro horario")
+        if(selectedTime && selectedDate) {
+            if (!reservedTimes[selectedDate]) {
+                reservedTimes[selectedDate] = [];
+            }
+    
+            if (reservedTimes[selectedDate].includes(selectedTime)) {
+                alert("Este turno ya ha sido reservado, por favor selecciona otro horario");
             } else {
-            console.log("horario seleccionado")
-            const updatedReservedTimes = [...reservedTimes, selectedTime]
-            setReservedTimes(updatedReservedTimes);
-
-            /* guardar en localstorage */
-            localStorage.setItem("reservedTimes", JSON.stringify(updatedReservedTimes))
-            closeNextModal()
-            openNextModal3()
+                console.log("Horario seleccionado");
+                reservedTimes[selectedDate].push(selectedTime);
+    
+                // Guardar en local storage
+                localStorage.setItem("reservedTimes", JSON.stringify(reservedTimes));
+    
+                closeNextModal();
+                openNextModal3();
             }
         }else{
             alert("por favor, selecciona un horario")

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Disclosure } from "@headlessui/react"
 import { GiHamburgerMenu } from "react-icons/gi"
 import Modal from "react-modal";
@@ -25,7 +25,16 @@ export default function NavBar () {
     const [email, setEmail] = useState("")
     const [note, setNote] = useState("")
 
-    
+    /* reserva de turno */
+    const [reservedTimes, setReservedTimes] = useState<{ [date: string]: string[] }>({});
+
+    useEffect(() => {
+        const storedReservedTimes = localStorage.getItem("reservedTimes");
+        if (storedReservedTimes) {
+            setReservedTimes(JSON.parse(storedReservedTimes));
+        }
+    },[])
+
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -108,10 +117,23 @@ export default function NavBar () {
 
     /* ventana emergente modal 3 */
     const handleNext3 = () => {
-        if(selectedTime) {
-            console.log("horario seleccionado")
-            closeNextModal()
-            openNextModal3()
+        if(selectedTime && selectedDate) {
+            if(!reservedTimes[selectedDate]) {
+                reservedTimes[selectedDate] = [];
+            }
+
+            if (reservedTimes[selectedDate].includes(selectedTime)) {
+                alert("Este turno ya ha sido reservado, por favor selecciona otro")
+            } else {
+                console.log("horario seleccionado")
+                reservedTimes[selectedDate].push(selectedTime);
+
+                /* guardar en local storage */
+                localStorage.setItem("reservedTimes", JSON.stringify(reservedTimes));
+                
+                closeNextModal()
+                openNextModal3()
+            }
         }else{
             alert("por favor, selecciona un horario")
         }

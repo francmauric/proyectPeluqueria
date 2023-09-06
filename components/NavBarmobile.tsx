@@ -130,7 +130,7 @@ export default function NavBar () {
 
                 /* guardar en local storage */
                 localStorage.setItem("reservedTimes", JSON.stringify(reservedTimes));
-                
+
                 closeNextModal()
                 openNextModal3()
             }
@@ -293,12 +293,13 @@ export default function NavBar () {
                             <div className="flex flex-wrap justify-center">
                             {horario.map((time) => (
                                 <label key={time}  className={`inline-flex items-center space-x-2 bg-gray-500 hover:bg-gray-800 text-white m-4 font-bold py-2 px-4 rounded ${
-                                    selectedTime === time ? 'bg-gray-800' : ''
+                                    reservedTimes[selectedDate]?.includes(time) ? 'bg-red-500 cursor-not-allowed' : selectedTime === time ? 'bg-gray-800' : ''
                                 }`}>
                                 <input type="radio" 
                                     value={time}
                                     onChange={() => handleSelectTime(time)}
                                     checked={selectedTime === time}
+                                    disabled={reservedTimes[selectedDate]?.includes(time)}
                                     className="form-radio hidden h-5 w-5 text-blue-600"
                                 />
                                 {time}
